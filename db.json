@@ -1,0 +1,12 @@
+{
+    "destinations": [
+        {
+            "id": 1,
+            "name": "New York City",
+            "hotels": {},
+            "restraurants": {},
+            "day activities": {},
+            "night activities": {}
+        }
+    ]
+}
