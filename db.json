@@ -1,28 +1,50 @@
 {
-    "destinations": [
-        {
-            "id": 1,
-            "destination": "New York",
-            "hotels": {},
-            "restraurants": {},
-            "day": {},
-            "night": {}
-        },
-        {
-            "id": 2,
-            "destination": "London",
-            "hotels": {},
-            "restraurants": {},
-            "day": {},
-            "night": {}
-        },
-        {
-            "id": 3,
-            "destination": "Madrid",
-            "hotels": {},
-            "restraurants": {},
-            "day": {},
-            "night": {}
-        }
-    ]
+  "destinations": [
+    {
+      "id": 1,
+      "destination": "New York",
+      "hotels": {},
+      "restraurants": {},
+      "day": {},
+      "night": {}
+    },
+    {
+      "id": 2,
+      "destination": "London",
+      "hotels": {},
+      "restraurants": {},
+      "day": {},
+      "night": {}
+    },
+    {
+      "id": 3,
+      "destination": "Madrid",
+      "hotels": {},
+      "restraurants": {},
+      "day": {},
+      "night": {}
+    },
+    {
+      "destination": "Tokyo",
+      "hotels": {
+        "hotel": "four seasons",
+        "notes": "great"
+      },
+      "restaurants": "sushi nakazawa",
+      "day": "cherry blossoms",
+      "night": "bar",
+      "id": 4
+    },
+    {
+      "destination": "Turks & Caicos",
+      "hotels": {
+        "hotel": "Somerset",
+        "notes": "Great"
+      },
+      "restaurants": "Coco Bistro",
+      "day": "Beach",
+      "night": "Ritz Casino",
+      "id": 5
+    }
+  ]
 }

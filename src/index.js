@@ -12,7 +12,10 @@ document.addEventListener("DOMContentLoaded", () => {
         e.preventDefault();
         let destinationObj = {
             destination: e.target.destination.value,
-            hotels: e.target.hotel.value,
+            hotels: {
+                hotel: e.target.hotel.value,
+                notes: e.target.hotelnotes.value
+            },
             restaurants: e.target.restaurant.value,
             day: e.target.day.value,
             night: e.target.night.value
@@ -20,6 +23,19 @@ document.addEventListener("DOMContentLoaded", () => {
         console.log(destinationObj)
         renderOneDestination(destinationObj)
         addNewDestination(destinationObj)
+    }
+
+    function addNewDestination(destinationObj) {
+        fetch('http://localhost:3000/destinations', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(destinationObj)
+        })
+            .then(res => res.json())
+            .then(data => console.log(data))
+
     }
 
     // Using mock backend using db.json server instead of remote API.
