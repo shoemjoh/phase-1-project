@@ -1,6 +1,26 @@
 // COMMIT ABOUT 30 TIMES DURING THIS PROJECT, PRESENT TENSE
 
 document.addEventListener("DOMContentLoaded", () => {
+    // Grab some of the html:
+    const destinationForm = document.querySelector(".add-destination-form")
+
+    // EVENT LISTENER: Submit event on the destination form.
+    destinationForm.addEventListener('submit', handleReviewEvent)
+
+    // Handle a form submission event.
+    function handleReviewEvent(e) {
+        e.preventDefault();
+        let destinationObj = {
+            destination: e.target.destination.value,
+            hotels: e.target.hotel.value,
+            restaurants: e.target.restaurant.value,
+            day: e.target.day.value,
+            night: e.target.night.value
+        }
+        console.log(destinationObj)
+        renderOneDestination(destinationObj)
+        addNewDestination(destinationObj)
+    }
 
     // Using mock backend using db.json server instead of remote API.
     function getDestinations() {
@@ -29,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
         tile.className = 'tile'
         tile.innerHTML = `
     <div>
-        <h4>${destination.name}<h4>
+        <h4>${destination.destination}<h4>
     </div>
     `
         // Add city tile to DOM
@@ -37,6 +57,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
         console.log(tile);
     }
+    // Pulls the destinations onto the page once the DOM loads.
     getDestinations();
+
+
 });
 

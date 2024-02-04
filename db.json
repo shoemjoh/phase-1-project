@@ -2,19 +2,27 @@
     "destinations": [
         {
             "id": 1,
-            "name": "New York",
+            "destination": "New York",
             "hotels": {},
             "restraurants": {},
-            "day activities": {},
-            "night activities": {}
+            "day": {},
+            "night": {}
         },
         {
             "id": 2,
-            "name": "London",
+            "destination": "London",
             "hotels": {},
             "restraurants": {},
-            "day activities": {},
-            "night activities": {}
+            "day": {},
+            "night": {}
+        },
+        {
+            "id": 3,
+            "destination": "Madrid",
+            "hotels": {},
+            "restraurants": {},
+            "day": {},
+            "night": {}
         }
     ]
 }
