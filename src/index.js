@@ -66,6 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
         tile.innerHTML = `
     <div>
         <h4>${destination.destination}<h4>
+        <button class="delete-button"> - </button>
     </div>
     `
         // Add city tile to DOM
