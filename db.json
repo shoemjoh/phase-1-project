@@ -1,39 +1,20 @@
 {
-    "destinations": [
-        {
-            "id": 1,
-            "destination": "New York",
-            "hotels": {},
-            "restraurants": {},
-            "day": {},
-            "night": {}
-        },
-        {
-            "id": 2,
-            "destination": "London",
-            "hotels": {},
-            "restraurants": {},
-            "day": {},
-            "night": {}
-        },
-        {
-            "id": 3,
-            "destination": "Madrid",
-            "hotels": {},
-            "restraurants": {},
-            "day": {},
-            "night": {}
-        },
-        {
-            "destination": "Turks",
-            "hotels": {
-                "hotel": "",
-                "notes": ""
-            },
-            "restaurants": "",
-            "day": "",
-            "night": "",
-            "id": 4
-        }
-    ]
+  "destinations": [
+    {
+      "id": 1,
+      "destination": "New York",
+      "hotels": {},
+      "restraurants": {},
+      "day": {},
+      "night": {}
+    },
+    {
+      "id": 2,
+      "destination": "London",
+      "hotels": {},
+      "restraurants": {},
+      "day": {},
+      "night": {}
+    }
+  ]
 }
