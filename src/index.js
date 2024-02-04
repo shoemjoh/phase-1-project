@@ -17,13 +17,54 @@ document.addEventListener("DOMContentLoaded", () => {
                 hotel: e.target.hotel.value,
                 notes: e.target.hotelnotes.value
             },
-            restaurants: e.target.restaurant.value,
-            day: e.target.day.value,
-            night: e.target.night.value
+            restaurants: {
+                restaurant: e.target.restaurant.value,
+                notes: e.target.restaurantnotes.value
+            },
+            day: {
+                activity: e.target.day.value,
+                notes: e.target.daynotes.value
+            },
+            night: {
+                activity: e.target.night.value,
+                notes: e.target.nightnotes.value
+            }
         }
-        console.log(destinationObj)
-        renderOneDestination(destinationObj)
-        addNewDestination(destinationObj)
+
+        fetch('http://localhost:3000/destinations')
+            .then(res => res.json())
+            .then(data => {
+                const existingDestination = data.find(dest => dest.destination === destinationObj.destination);
+                console.log(existingDestination)
+                if (existingDestination) {
+                    // Destination exists, update existing object
+                    console.log("destination exists")
+                    fetch(`http://localhost:3000/destinations/${existingDestination.id}`, {
+                        method: 'PUT',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({ ...existingDestination, ...destinationObj }) // Merge properties
+                    })
+                        .then(res => res.json())
+                        .then(updatedDestination => {
+                            // Update the tile in the DOM if needed
+                            const tileToUpdate = document.querySelector(`.tile[data-id="${existingDestination.id}"]`);
+                            if (tileToUpdate) {
+                                // ... (update tile content with new information)
+                            }
+                            console.log("Destination updated:", updatedDestination);
+                        });
+                } else {
+                    // Destination doesn't exist, create a new one
+                    console.log("destination doesn't exist")
+                    renderOneDestination(destinationObj)
+                    addNewDestination(destinationObj);
+                }
+
+            });
+
+
     }
 
     function addNewDestination(destinationObj) {
@@ -41,9 +82,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Using mock backend using db.json server instead of remote API.
     function getDestinations() {
-        console.log("get destinations")
-        // Grab html element where we want to display the server request.
-
         // HTTP GET request to local server
         // Run json-server --watch db.json in the terminal
         fetch('http://localhost:3000/destinations')

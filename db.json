@@ -1,20 +1,64 @@
 {
   "destinations": [
     {
-      "id": 1,
       "destination": "New York",
-      "hotels": {},
-      "restraurants": {},
-      "day": {},
-      "night": {}
+      "hotels": {
+        "hotel": "",
+        "notes": ""
+      },
+      "restaurants": {
+        "restaurant": "test",
+        "notes": ""
+      },
+      "day": {
+        "activity": "",
+        "notes": ""
+      },
+      "night": {
+        "activity": "",
+        "notes": ""
+      },
+      "id": 1
     },
     {
-      "id": 2,
-      "destination": "London",
-      "hotels": {},
-      "restraurants": {},
-      "day": {},
-      "night": {}
+      "destination": "Tokyo",
+      "hotels": {
+        "hotel": "four season",
+        "notes": "incred"
+      },
+      "restaurants": {
+        "restaurant": "",
+        "notes": ""
+      },
+      "day": {
+        "activity": "",
+        "notes": ""
+      },
+      "night": {
+        "activity": "",
+        "notes": ""
+      },
+      "id": 2
+    },
+    {
+      "destination": "Zurich",
+      "hotels": {
+        "hotel": "",
+        "notes": ""
+      },
+      "restaurants": {
+        "restaurant": "",
+        "notes": ""
+      },
+      "day": {
+        "activity": "",
+        "notes": ""
+      },
+      "night": {
+        "activity": "",
+        "notes": ""
+      },
+      "id": 3
     }
   ]
 }
