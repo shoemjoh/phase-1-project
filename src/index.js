@@ -3,6 +3,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     // Grab some of the html:
     const destinationForm = document.querySelector(".add-destination-form")
+    const deleteBtn = document.querySelector(".delete-button")
 
     // EVENT LISTENER: Submit event on the destination form.
     destinationForm.addEventListener('submit', handleReviewEvent)
@@ -69,14 +70,29 @@ document.addEventListener("DOMContentLoaded", () => {
         <button class="delete-button"> - </button>
     </div>
     `
+        // Allow for delete button.
+        tile.querySelector(".delete-button").addEventListener('click', () => {
+            tile.remove()
+            deleteDestination(destination.id)
+        })
         // Add city tile to DOM
         document.querySelector('#destination-list').appendChild(tile)
-
         console.log(tile);
     }
     // Pulls the destinations onto the page once the DOM loads.
     getDestinations();
 
+    function deleteDestination(id) {
+        fetch(`http://localhost:3000/destinations/${id}`, {
+            method: 'DELETE',
+            headers: {
+                'Content-type': 'application / json'
 
-});
+            }
+        })
+            .then(res => res.json())
+            .then(data => console.log(data))
+    }
+})
+
 
