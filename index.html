@@ -6,7 +6,7 @@
     <style>
         .header {
             /* Light gray background */
-            padding: 20px;
+            padding: 10px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -21,14 +21,40 @@
             color: #333;
         }
     </style>
+    <link rel="stylesheet" href="index.css" />
 </head>
 
 <body>
     <script src="src/index.js"> </script>
     <header class="header">
         <h1><a href="#">930res</a></h1>
-        <span>Welcome, John Shoemaker</span>
+        <span>JOHN SHOEMAKER</span>
     </header>
+    <hr>
+    <div class="container">
+        <form class="add-toy-form">
+            <h3>DESTINATION - </h3>
+            <label for="hotels">HOTELS: </label>
+            <input type="text" id="hotels" name="HOTELS" placeholder="name" />
+            <input type="text" id="hotel-notes" name="hotel notes" placeholder="notes" />
+            <br />
+            <label for="restaurants">RESTAURANTS: </label>
+            <input type="text" id="restaurants" name="RESTAURANTS" placeholder="name" />
+            <input type="text" id="restaurant-notes" name="restaurant notes" placeholder="notes" />
+            <br />
+            <label for="day-activites">DAY ACTIVITIES: </label>
+            <input type="text" id="day-activities" name="DAY ACTIVITIES" placeholder="name" />
+            <input type="text" id="day-notes" name="day activity notes" placeholder="notes" />
+            <br />
+            <label for="night-activites">NIGHT ACTIVITIES: </label>
+            <input type="text" id="night-activities" name="NIGHT ACTIVITIES" placeholder="name" />
+            <input type="text" id="night-notes" name="night activity notes" placeholder="notes" />
+            <br />
+            <input type="submit" name="submit" value="SUBMIT" class="submit" />
+        </form>
+    </div>
+    <hr>
+    <div id="destination-list"></div>
 
 </body>
 
