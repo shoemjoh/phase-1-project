@@ -1,63 +1,103 @@
 {
   "destinations": [
     {
-      "destination": "New York",
-      "hotels": {
-        "hotel": "",
-        "notes": ""
-      },
-      "restaurants": {
-        "restaurant": "test",
-        "notes": ""
-      },
-      "day": {
-        "activity": "",
-        "notes": ""
-      },
-      "night": {
-        "activity": "",
-        "notes": ""
-      },
+      "destination": "Tokyo",
+      "hotels": [
+        {
+          "hotel": "test",
+          "notes": "test"
+        }
+      ],
+      "restaurants": [
+        {
+          "restaurant": "",
+          "notes": ""
+        }
+      ],
+      "day": [
+        {
+          "activity": "",
+          "notes": ""
+        }
+      ],
+      "night": [
+        {
+          "activity": "",
+          "notes": ""
+        }
+      ],
       "id": 1
     },
     {
-      "destination": "Tokyo",
-      "hotels": {
-        "hotel": "four season",
-        "notes": "incred"
-      },
-      "restaurants": {
-        "restaurant": "",
-        "notes": ""
-      },
-      "day": {
-        "activity": "",
-        "notes": ""
-      },
-      "night": {
-        "activity": "",
-        "notes": ""
-      },
+      "destination": "London",
+      "hotels": [
+        {
+          "hotel": "Kensington",
+          "notes": "Nice"
+        }
+      ],
+      "restaurants": [
+        {
+          "restaurant": "Balh",
+          "notes": "a"
+        }
+      ],
+      "day": [
+        {
+          "activity": "h",
+          "notes": "h"
+        }
+      ],
+      "night": [
+        {
+          "activity": "h",
+          "notes": "h"
+        }
+      ],
       "id": 2
     },
     {
-      "destination": "Zurich",
-      "hotels": {
-        "hotel": "",
-        "notes": ""
-      },
-      "restaurants": {
-        "restaurant": "",
-        "notes": ""
-      },
-      "day": {
-        "activity": "",
-        "notes": ""
-      },
-      "night": {
-        "activity": "",
-        "notes": ""
-      },
+      "destination": "New York",
+      "hotels": [
+        {
+          "hotel": "",
+          "notes": ""
+        },
+        {
+          "hotel": "",
+          "notes": ""
+        }
+      ],
+      "restaurants": [
+        {
+          "restaurant": "Cucina Alba",
+          "notes": "Vibey and great pasta"
+        },
+        {
+          "restaurant": "Via Carota",
+          "notes": "Get there by 5p"
+        }
+      ],
+      "day": [
+        {
+          "activity": "",
+          "notes": ""
+        },
+        {
+          "activity": "",
+          "notes": ""
+        }
+      ],
+      "night": [
+        {
+          "activity": "",
+          "notes": ""
+        },
+        {
+          "activity": "",
+          "notes": ""
+        }
+      ],
       "id": 3
     }
   ]

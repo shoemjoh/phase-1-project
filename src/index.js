@@ -13,22 +13,31 @@ document.addEventListener("DOMContentLoaded", () => {
         e.preventDefault();
         let destinationObj = {
             destination: e.target.destination.value,
-            hotels: {
-                hotel: e.target.hotel.value,
-                notes: e.target.hotelnotes.value
-            },
-            restaurants: {
-                restaurant: e.target.restaurant.value,
-                notes: e.target.restaurantnotes.value
-            },
-            day: {
-                activity: e.target.day.value,
-                notes: e.target.daynotes.value
-            },
-            night: {
-                activity: e.target.night.value,
-                notes: e.target.nightnotes.value
-            }
+            hotels: [
+                {
+                    hotel: e.target.hotel.value,
+                    notes: e.target.hotelnotes.value
+                }
+            ]
+            ,
+            restaurants: [
+                {
+                    restaurant: e.target.restaurant.value,
+                    notes: e.target.restaurantnotes.value
+                }
+            ],
+            day: [
+                {
+                    activity: e.target.day.value,
+                    notes: e.target.daynotes.value
+                }
+            ],
+            night: [
+                {
+                    activity: e.target.night.value,
+                    notes: e.target.nightnotes.value
+                }
+            ]
         }
 
         fetch('http://localhost:3000/destinations')
@@ -39,20 +48,36 @@ document.addEventListener("DOMContentLoaded", () => {
                 if (existingDestination) {
                     // Destination exists, update existing object
                     console.log("destination exists")
+
+                    // Create a copy of the existing destination to avoid modifying the original.
+                    const updatedDestination = { ...existingDestination }
+
+                    // Update hotels with new ones from the form
+                    updatedDestination.hotels.push(...destinationObj.hotels)
+
+                    // Update restaurants with new ones from the form
+                    updatedDestination.restaurants.push(...destinationObj.restaurants)
+
+                    // Update day activities with new ones from the form
+                    updatedDestination.day.push(...destinationObj.day)
+
+                    // Update night activities with new ones from the form
+                    updatedDestination.night.push(...destinationObj.night)
+
                     fetch(`http://localhost:3000/destinations/${existingDestination.id}`, {
                         method: 'PUT',
                         headers: {
                             'Content-Type': 'application/json'
                         },
-                        body: JSON.stringify({ ...existingDestination, ...destinationObj }) // Merge properties
+                        body: JSON.stringify(updatedDestination) // Merge properties
                     })
                         .then(res => res.json())
                         .then(updatedDestination => {
                             // Update the tile in the DOM if needed
-                            const tileToUpdate = document.querySelector(`.tile[data-id="${existingDestination.id}"]`);
-                            if (tileToUpdate) {
-                                // ... (update tile content with new information)
-                            }
+                            //const tileToUpdate = document.querySelector(`.tile[data-id="${existingDestination.id}"]`);
+                            //if (tileToUpdate) {
+                            //    // ... (update tile content with new information)
+                            //}
                             console.log("Destination updated:", updatedDestination);
                         });
                 } else {
