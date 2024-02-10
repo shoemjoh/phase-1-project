@@ -33,31 +33,48 @@
     <hr>
     <div class="container">
         <form class="add-destination-form">
-            <label for="destinations">DESTINATION: </label>
-            <input type="text" class="destinations" id="destinations" name="destination"
-                placeholder="search for your destintation" />
+            <div class="form-group">
+                <label for="destinations">DESTINATION: </label>
+                <input type="text" class="destinations" id="destinations" name="destination"
+                    placeholder="search for your destintation" />
+            </div>
             <br />
-            <label for="hotels">HOTELS: </label>
-            <input type="text" id="hotels" name="hotel" placeholder="name" />
-            <input type="text" id="hotel-notes" name="hotelnotes" placeholder="notes" />
+            <div class="form-group">
+                <label for="hotels">HOTELS: </label>
+                <input class="name" type="text" id="hotels" name="hotel" placeholder="name" />
+                <input class="notes" type="text" id="hotel-notes" name="hotelnotes" placeholder="notes" />
+            </div>
             <br />
-            <label for="restaurants">RESTAURANTS: </label>
-            <input type="text" id="restaurants" name="restaurant" placeholder="name" />
-            <input type="text" id="restaurant-notes" name="restaurantnotes" placeholder="notes" />
+            <div class="form-group">
+                <label for="restaurants">RESTAURANTS: </label>
+                <input class="name" type="text" id="restaurants" name="restaurant" placeholder="name" />
+                <input class="notes" type="text" id="restaurant-notes" name="restaurantnotes" placeholder="notes" />
+            </div>
             <br />
-            <label for="day-activites">DAY ACTIVITIES: </label>
-            <input type="text" id="day-activities" name="day" placeholder="name" />
-            <input type="text" id="day-notes" name="daynotes" placeholder="notes" />
+            <div class="form-group">
+                <label for="day-activites">DAY ACTIVITIES: </label>
+                <input class="name" type="text" id="day-activities" name="day" placeholder="name" />
+                <input class="notes" type="text" id="day-notes" name="daynotes" placeholder="notes" />
+            </div>
             <br />
-            <label for="night-activites">NIGHT ACTIVITIES: </label>
-            <input type="text" id="night-activities" name="night" placeholder="name" />
-            <input type="text" id="night-notes" name="nightnotes" placeholder="notes" />
+            <div class="form-group">
+                <label for="night-activites">NIGHT ACTIVITIES: </label>
+                <input class="name" type="text" id="night-activities" name="night" placeholder="name" />
+                <input class="notes" type="text" id="night-notes" name="nightnotes" placeholder="notes" />
+            </div>
             <br />
-            <input type="submit" name="submit" value="SUBMIT" class="submit" />
+            <div>
+                <input class="submit" type="submit" name="submit" value="SUBMIT" class="submit" />
+            </div>
+
         </form>
     </div>
     <hr>
     <div id="destination-list"></div>
+    <div id="destination-log">
+        <ul>
+        </ul>
+    </div>
 
 </body>
 

@@ -10,6 +10,47 @@
 }
 
 .destinations {
-    width: 300px;
-    height: 10px;
+    width: 200px;
+    height: 15px;
+}
+
+.add-destination-form {
+    display: flex;
+    /* Use flexbox for overall layout */
+    flex-direction: column;
+    /* Arrange elements vertically */
+    gap: 0.2rem;
+    /* Add spacing between form groups */
+}
+
+.form-group {
+    display: flex;
+    /* Align label and input side-by-side */
+    align-items: center;
+    /* Vertically align label and input */
+    margin-bottom: 0.1rem;
+    /* Add spacing between form-groups */
+}
+
+.name {
+    width: 200px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.notes {
+    width: 750px;
+    height: 20px;
+}
+
+.submit {
+    width: 100px;
+}
+
+label {
+    margin-right: 0.1rem;
+    /* Add spacing between label and input */
+    min-width: 125px;
+    /* Ensure labels have enough space */
+    font-weight: bold;
 }
