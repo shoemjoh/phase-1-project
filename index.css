@@ -11,7 +11,7 @@
 
 .destinations {
     width: 200px;
-    height: 15px;
+    height: 20px;
 }
 
 .add-destination-form {
@@ -19,8 +19,10 @@
     /* Use flexbox for overall layout */
     flex-direction: column;
     /* Arrange elements vertically */
-    gap: 0.2rem;
+    gap: 3px;
     /* Add spacing between form groups */
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .form-group {
@@ -28,7 +30,7 @@
     /* Align label and input side-by-side */
     align-items: center;
     /* Vertically align label and input */
-    margin-bottom: 0.1rem;
+    margin-bottom: 0.1px;
     /* Add spacing between form-groups */
 }
 
@@ -48,9 +50,24 @@
 }
 
 label {
-    margin-right: 0.1rem;
+    margin-right: 0.1px;
     /* Add spacing between label and input */
     min-width: 125px;
     /* Ensure labels have enough space */
     font-weight: bold;
+}
+
+.delete-button {
+    outline: none;
+
+    /* Remove default gray background */
+    background-color: transparent;
+
+    /* Additional styling options (optional) */
+    border: none;
+    /* Remove any border */
+    /* Set desired text color */
+    cursor: pointer;
+    /* Indicate clickability */
+    font-weight: bold
 }

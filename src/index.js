@@ -130,7 +130,7 @@ document.addEventListener("DOMContentLoaded", () => {
         tile.innerHTML = `
     <div>
         <h4>${destination.destination}<h4>
-        <button class="delete-button"> - </button>
+        <button class="delete-button"> __ </button>
     </div>
     `
         // Allow for delete button.
@@ -141,6 +141,14 @@ document.addEventListener("DOMContentLoaded", () => {
         // Add city tile to DOM
         document.querySelector('#destination-list').appendChild(tile)
         console.log(tile);
+
+        tile.addEventListener('mouseover', () => {
+            tile.style.backgroundColor = 'red';
+        })
+        tile.addEventListener('mouseleave', () => {
+            tile.style.backgroundColor = 'inherit';
+        })
+
     }
     // Pulls the destinations onto the page once the DOM loads.
     getDestinations();

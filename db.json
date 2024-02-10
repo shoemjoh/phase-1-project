@@ -29,34 +29,6 @@
       "id": 1
     },
     {
-      "destination": "London",
-      "hotels": [
-        {
-          "hotel": "Kensington",
-          "notes": "Nice"
-        }
-      ],
-      "restaurants": [
-        {
-          "restaurant": "Balh",
-          "notes": "a"
-        }
-      ],
-      "day": [
-        {
-          "activity": "h",
-          "notes": "h"
-        }
-      ],
-      "night": [
-        {
-          "activity": "h",
-          "notes": "h"
-        }
-      ],
-      "id": 2
-    },
-    {
       "destination": "New York",
       "hotels": [
         {
@@ -74,6 +46,10 @@
         {
           "hotel": "",
           "notes": ""
+        },
+        {
+          "hotel": "Hotel Chelsea",
+          "notes": "Classic, chic vintage spot with sceney bar and good restaurant"
         }
       ],
       "restaurants": [
@@ -92,9 +68,17 @@
         {
           "restaurant": "Ci Siamo",
           "notes": "Modern interior, terrific italian food"
+        },
+        {
+          "restaurant": "",
+          "notes": ""
         }
       ],
       "day": [
+        {
+          "activity": "",
+          "notes": ""
+        },
         {
           "activity": "",
           "notes": ""
@@ -128,9 +112,41 @@
         {
           "activity": "",
           "notes": ""
+        },
+        {
+          "activity": "",
+          "notes": ""
         }
       ],
       "id": 3
+    },
+    {
+      "destination": "London",
+      "hotels": [
+        {
+          "hotel": "",
+          "notes": ""
+        }
+      ],
+      "restaurants": [
+        {
+          "restaurant": "",
+          "notes": ""
+        }
+      ],
+      "day": [
+        {
+          "activity": "",
+          "notes": ""
+        }
+      ],
+      "night": [
+        {
+          "activity": "",
+          "notes": ""
+        }
+      ],
+      "id": 4
     }
   ]
 }
