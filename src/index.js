@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     renderOneDestination(destinationObj)
                     addNewDestination(destinationObj);
                 }
-
+                destinationForm.reset();
             });
 
 

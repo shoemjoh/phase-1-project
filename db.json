@@ -66,6 +66,14 @@
         {
           "hotel": "",
           "notes": ""
+        },
+        {
+          "hotel": "",
+          "notes": ""
+        },
+        {
+          "hotel": "",
+          "notes": ""
         }
       ],
       "restaurants": [
@@ -76,6 +84,14 @@
         {
           "restaurant": "Via Carota",
           "notes": "Get there by 5p"
+        },
+        {
+          "restaurant": "Cafe Mogador",
+          "notes": "Great chicken and hummus"
+        },
+        {
+          "restaurant": "Ci Siamo",
+          "notes": "Modern interior, terrific italian food"
         }
       ],
       "day": [
@@ -86,9 +102,25 @@
         {
           "activity": "",
           "notes": ""
+        },
+        {
+          "activity": "",
+          "notes": ""
+        },
+        {
+          "activity": "",
+          "notes": ""
         }
       ],
       "night": [
+        {
+          "activity": "",
+          "notes": ""
+        },
+        {
+          "activity": "",
+          "notes": ""
+        },
         {
           "activity": "",
           "notes": ""
