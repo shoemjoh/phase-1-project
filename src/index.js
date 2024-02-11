@@ -13,32 +13,38 @@ document.addEventListener("DOMContentLoaded", () => {
         e.preventDefault();
         let destinationObj = {
             destination: e.target.destination.value,
-            hotels: [
-                {
-                    hotel: e.target.hotel.value,
-                    notes: e.target.hotelnotes.value
-                }
-            ]
-            ,
-            restaurants: [
-                {
-                    restaurant: e.target.restaurant.value,
-                    notes: e.target.restaurantnotes.value
-                }
-            ],
-            day: [
-                {
-                    activity: e.target.day.value,
-                    notes: e.target.daynotes.value
-                }
-            ],
-            night: [
-                {
-                    activity: e.target.night.value,
-                    notes: e.target.nightnotes.value
-                }
-            ]
+            hotels: [],
+            restaurants: [],
+            day: [],
+            night: []
+        };
+
+        // Check for values.
+        if (e.target.hotel.value) {
+            destinationObj.hotels.push({
+                hotel: e.target.hotel.value,
+                notes: e.target.hotelnotes.value
+            })
         }
+        if (e.target.restaurant.value) {
+            destinationObj.restaurants.push({
+                restaurant: e.target.restaurant.value,
+                notes: e.target.restaurantnotes.value
+            })
+        }
+        if (e.target.day.value) {
+            destinationObj.day.push({
+                activity: e.target.day.value,
+                notes: e.target.daynotes.value
+            })
+        }
+        if (e.target.night.value) {
+            destinationObj.night.push({
+                activity: e.target.night.value,
+                notes: e.target.nightnotes.value
+            })
+        }
+
 
         fetch('http://localhost:3000/destinations')
             .then(res => res.json())
@@ -88,9 +94,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
                 destinationForm.reset();
             });
-
-
     }
+
+
+
 
     function addNewDestination(destinationObj) {
         fetch('http://localhost:3000/destinations', {
@@ -128,7 +135,7 @@ document.addEventListener("DOMContentLoaded", () => {
         console.log(tile);
 
         tile.addEventListener('mouseover', () => {
-            tile.style.backgroundColor = 'gold';
+            tile.style.backgroundColor = 'green';
         })
         tile.addEventListener('mouseleave', () => {
             tile.style.backgroundColor = 'inherit';
@@ -172,7 +179,10 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         })
             .then(res => res.json())
-            .then(data => console.log(data))
+            .then(data => {
+                console.log(data)
+
+            })
     }
 
     function pullDestinationList(id) {
@@ -183,10 +193,25 @@ document.addEventListener("DOMContentLoaded", () => {
             .then(data => {
                 console.log("Destination details:", data)
                 let hotelList = "";
+                let restaurantList = "";
+                let dayList = "";
+                let nightList = "";
 
                 // Iterate through each hotel in the data object.
                 data.hotels.forEach(hotel => {
                     hotelList += `<li>${hotel.hotel}: ${hotel.notes}</li>`;
+                })
+                // Iterate through each restaurant in the data object.
+                data.restaurants.forEach(restaurant => {
+                    restaurantList += `<li>${restaurant.restaurant}: ${restaurant.notes}</li>`;
+                })
+                // Iterate through each day notes in the data object.
+                data.day.forEach(d => {
+                    dayList += `<li>${d.activity}: ${d.notes}</li>`;
+                })
+                // Iterate through each restaurant in the data object.
+                data.night.forEach(n => {
+                    nightList += `<li>${n.activity}: ${n.notes}</li>`;
                 })
 
                 let logElement = document.querySelector('#destination-log');
@@ -195,6 +220,18 @@ document.addEventListener("DOMContentLoaded", () => {
                 <h3> Hotels </h3>
                <ul>
                ${hotelList}
+               </ul>
+               <h3> Restaurants </h3>
+               <ul>
+               ${restaurantList}
+               </ul>
+               <h3> Day Activities </h3>
+               <ul>
+               ${dayList}
+               </ul>
+               <h3> Night Activities </h3>
+               <ul>
+               ${nightList}
                </ul>
                 `;
 

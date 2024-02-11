@@ -10,163 +10,27 @@
       ],
       "restaurants": [
         {
-          "restaurant": "",
-          "notes": ""
+          "restaurant": "sushi nakazawa",
+          "notes": "Special sushi restuarant"
+        },
+        {
+          "restaurant": "Cucina Alba",
+          "notes": "Combination of Beverly Hills Hotel and Swan Miami. Worth it."
         }
       ],
       "day": [
         {
-          "activity": "",
-          "notes": ""
+          "activity": "Highline",
+          "notes": "Walk along and view chelsea and the old train tracks"
         }
       ],
       "night": [
         {
-          "activity": "",
-          "notes": ""
+          "activity": "Acme",
+          "notes": "Fun dancing club underneath restaurant"
         }
       ],
       "id": 1
-    },
-    {
-      "destination": "Tokyo",
-      "hotels": [
-        {
-          "hotel": "Four Seasons",
-          "notes": "Beautiful with the cherry blossoms"
-        }
-      ],
-      "restaurants": [
-        {
-          "restaurant": "",
-          "notes": ""
-        }
-      ],
-      "day": [
-        {
-          "activity": "",
-          "notes": ""
-        }
-      ],
-      "night": [
-        {
-          "activity": "",
-          "notes": ""
-        }
-      ],
-      "id": 2
-    },
-    {
-      "destination": "Zurich",
-      "hotels": [
-        {
-          "hotel": "Grand Hotel",
-          "notes": "Skiing"
-        }
-      ],
-      "restaurants": [
-        {
-          "restaurant": "",
-          "notes": ""
-        }
-      ],
-      "day": [
-        {
-          "activity": "",
-          "notes": ""
-        }
-      ],
-      "night": [
-        {
-          "activity": "",
-          "notes": ""
-        }
-      ],
-      "id": 3
-    },
-    {
-      "destination": "London",
-      "hotels": [
-        {
-          "hotel": "Test",
-          "notes": "Test"
-        }
-      ],
-      "restaurants": [
-        {
-          "restaurant": "",
-          "notes": ""
-        }
-      ],
-      "day": [
-        {
-          "activity": "",
-          "notes": ""
-        }
-      ],
-      "night": [
-        {
-          "activity": "",
-          "notes": ""
-        }
-      ],
-      "id": 4
-    },
-    {
-      "destination": "Turks",
-      "hotels": [
-        {
-          "hotel": "The Somerset",
-          "notes": "lovely"
-        }
-      ],
-      "restaurants": [
-        {
-          "restaurant": "",
-          "notes": ""
-        }
-      ],
-      "day": [
-        {
-          "activity": "",
-          "notes": ""
-        }
-      ],
-      "night": [
-        {
-          "activity": "",
-          "notes": ""
-        }
-      ],
-      "id": 5
-    },
-    {
-      "destination": "Test",
-      "hotels": [
-        {
-          "hotel": "Test 1",
-          "notes": "Test 1"
-        }
-      ],
-      "restaurants": [
-        {
-          "restaurant": "",
-          "notes": ""
-        }
-      ],
-      "day": [
-        {
-          "activity": "",
-          "notes": ""
-        }
-      ],
-      "night": [
-        {
-          "activity": "",
-          "notes": ""
-        }
-      ],
-      "id": 6
     }
   ]
 }
