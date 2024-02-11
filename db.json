@@ -6,9 +6,17 @@
         {
           "hotel": "test",
           "notes": "test"
+        },
+        {
+          "hotel": "sushi nakazawa",
+          "notes": "amazing"
         }
       ],
       "restaurants": [
+        {
+          "restaurant": "",
+          "notes": ""
+        },
         {
           "restaurant": "",
           "notes": ""
@@ -18,9 +26,17 @@
         {
           "activity": "",
           "notes": ""
+        },
+        {
+          "activity": "",
+          "notes": ""
         }
       ],
       "night": [
+        {
+          "activity": "",
+          "notes": ""
+        },
         {
           "activity": "",
           "notes": ""
@@ -147,6 +163,190 @@
         }
       ],
       "id": 4
+    },
+    {
+      "destination": "Milan",
+      "hotels": [
+        {
+          "hotel": "",
+          "notes": ""
+        }
+      ],
+      "restaurants": [
+        {
+          "restaurant": "",
+          "notes": ""
+        }
+      ],
+      "day": [
+        {
+          "activity": "",
+          "notes": ""
+        }
+      ],
+      "night": [
+        {
+          "activity": "",
+          "notes": ""
+        }
+      ],
+      "id": 8
+    },
+    {
+      "destination": "Positano",
+      "hotels": [
+        {
+          "hotel": "",
+          "notes": ""
+        }
+      ],
+      "restaurants": [
+        {
+          "restaurant": "",
+          "notes": ""
+        }
+      ],
+      "day": [
+        {
+          "activity": "",
+          "notes": ""
+        }
+      ],
+      "night": [
+        {
+          "activity": "",
+          "notes": ""
+        }
+      ],
+      "id": 9
+    },
+    {
+      "destination": "Amsterdam",
+      "hotels": [
+        {
+          "hotel": "",
+          "notes": ""
+        }
+      ],
+      "restaurants": [
+        {
+          "restaurant": "",
+          "notes": ""
+        }
+      ],
+      "day": [
+        {
+          "activity": "",
+          "notes": ""
+        }
+      ],
+      "night": [
+        {
+          "activity": "",
+          "notes": ""
+        }
+      ],
+      "id": 10
+    },
+    {
+      "destination": "Miami",
+      "hotels": [
+        {
+          "hotel": "",
+          "notes": ""
+        }
+      ],
+      "restaurants": [
+        {
+          "restaurant": "",
+          "notes": ""
+        }
+      ],
+      "day": [
+        {
+          "activity": "",
+          "notes": ""
+        }
+      ],
+      "night": [
+        {
+          "activity": "",
+          "notes": ""
+        }
+      ],
+      "id": 11
+    },
+    {
+      "destination": "Prague",
+      "hotels": [
+        {
+          "hotel": "",
+          "notes": ""
+        }
+      ],
+      "restaurants": [
+        {
+          "restaurant": "",
+          "notes": ""
+        }
+      ],
+      "day": [
+        {
+          "activity": "",
+          "notes": ""
+        }
+      ],
+      "night": [
+        {
+          "activity": "",
+          "notes": ""
+        }
+      ],
+      "id": 12
+    },
+    {
+      "destination": "Montreal",
+      "hotels": [
+        {
+          "hotel": "",
+          "notes": ""
+        },
+        {
+          "hotel": "The W",
+          "notes": "Party Hotel"
+        }
+      ],
+      "restaurants": [
+        {
+          "restaurant": "",
+          "notes": ""
+        },
+        {
+          "restaurant": "",
+          "notes": ""
+        }
+      ],
+      "day": [
+        {
+          "activity": "",
+          "notes": ""
+        },
+        {
+          "activity": "",
+          "notes": ""
+        }
+      ],
+      "night": [
+        {
+          "activity": "",
+          "notes": ""
+        },
+        {
+          "activity": "",
+          "notes": ""
+        }
+      ],
+      "id": 13
     }
   ]
 }

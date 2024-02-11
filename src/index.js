@@ -143,10 +143,14 @@ document.addEventListener("DOMContentLoaded", () => {
         console.log(tile);
 
         tile.addEventListener('mouseover', () => {
-            tile.style.backgroundColor = 'red';
+            tile.style.backgroundColor = 'gold';
         })
         tile.addEventListener('mouseleave', () => {
             tile.style.backgroundColor = 'inherit';
+        })
+
+        tile.addEventListener('click', () => {
+            pullDestinationList(destination.id)
         })
 
     }
@@ -163,6 +167,22 @@ document.addEventListener("DOMContentLoaded", () => {
         })
             .then(res => res.json())
             .then(data => console.log(data))
+    }
+
+    function pullDestinationList(id) {
+        fetch(`http://localhost:3000/destinations/${id}`)
+            .then(res => res.json())
+            .then(data => {
+                console.log("Destination details:", data)
+                let log = document.querySelector('#destination-log');
+                log.innerHTML = `
+                <h2>${data.destination}</h2>
+                <p>Hotels: ${data.hotels.map(hotel => hotel.hotel).join(", ")}</p>
+                `;
+
+
+            })
+
     }
 })
 
