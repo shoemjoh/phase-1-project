@@ -1,22 +1,14 @@
 {
   "destinations": [
     {
-      "destination": "Tokyo",
+      "destination": "New York",
       "hotels": [
         {
-          "hotel": "test",
-          "notes": "test"
-        },
-        {
-          "hotel": "sushi nakazawa",
-          "notes": "amazing"
+          "hotel": "Waldorf Astoria",
+          "notes": "Located in midtown, old and ornate but surprisingly small rooms (just NYC hotels in general)."
         }
       ],
       "restaurants": [
-        {
-          "restaurant": "",
-          "notes": ""
-        },
         {
           "restaurant": "",
           "notes": ""
@@ -26,17 +18,9 @@
         {
           "activity": "",
           "notes": ""
-        },
-        {
-          "activity": "",
-          "notes": ""
         }
       ],
       "night": [
-        {
-          "activity": "",
-          "notes": ""
-        },
         {
           "activity": "",
           "notes": ""
@@ -45,46 +29,14 @@
       "id": 1
     },
     {
-      "destination": "New York",
+      "destination": "Tokyo",
       "hotels": [
         {
-          "hotel": "",
-          "notes": ""
-        },
-        {
-          "hotel": "",
-          "notes": ""
-        },
-        {
-          "hotel": "",
-          "notes": ""
-        },
-        {
-          "hotel": "",
-          "notes": ""
-        },
-        {
-          "hotel": "Hotel Chelsea",
-          "notes": "Classic, chic vintage spot with sceney bar and good restaurant"
+          "hotel": "Four Seasons",
+          "notes": "Beautiful with the cherry blossoms"
         }
       ],
       "restaurants": [
-        {
-          "restaurant": "Cucina Alba",
-          "notes": "Vibey and great pasta"
-        },
-        {
-          "restaurant": "Via Carota",
-          "notes": "Get there by 5p"
-        },
-        {
-          "restaurant": "Cafe Mogador",
-          "notes": "Great chicken and hummus"
-        },
-        {
-          "restaurant": "Ci Siamo",
-          "notes": "Modern interior, terrific italian food"
-        },
         {
           "restaurant": "",
           "notes": ""
@@ -94,41 +46,37 @@
         {
           "activity": "",
           "notes": ""
-        },
-        {
-          "activity": "",
-          "notes": ""
-        },
-        {
-          "activity": "",
-          "notes": ""
-        },
-        {
-          "activity": "",
-          "notes": ""
-        },
-        {
-          "activity": "",
-          "notes": ""
         }
       ],
       "night": [
         {
           "activity": "",
           "notes": ""
-        },
+        }
+      ],
+      "id": 2
+    },
+    {
+      "destination": "Zurich",
+      "hotels": [
+        {
+          "hotel": "Grand Hotel",
+          "notes": "Skiing"
+        }
+      ],
+      "restaurants": [
+        {
+          "restaurant": "",
+          "notes": ""
+        }
+      ],
+      "day": [
         {
           "activity": "",
           "notes": ""
-        },
-        {
-          "activity": "",
-          "notes": ""
-        },
-        {
-          "activity": "",
-          "notes": ""
-        },
+        }
+      ],
+      "night": [
         {
           "activity": "",
           "notes": ""
@@ -140,8 +88,8 @@
       "destination": "London",
       "hotels": [
         {
-          "hotel": "",
-          "notes": ""
+          "hotel": "Test",
+          "notes": "Test"
         }
       ],
       "restaurants": [
@@ -165,11 +113,11 @@
       "id": 4
     },
     {
-      "destination": "Milan",
+      "destination": "Turks",
       "hotels": [
         {
-          "hotel": "",
-          "notes": ""
+          "hotel": "The Somerset",
+          "notes": "lovely"
         }
       ],
       "restaurants": [
@@ -190,14 +138,14 @@
           "notes": ""
         }
       ],
-      "id": 8
+      "id": 5
     },
     {
-      "destination": "Positano",
+      "destination": "Test",
       "hotels": [
         {
-          "hotel": "",
-          "notes": ""
+          "hotel": "Test 1",
+          "notes": "Test 1"
         }
       ],
       "restaurants": [
@@ -218,135 +166,7 @@
           "notes": ""
         }
       ],
-      "id": 9
-    },
-    {
-      "destination": "Amsterdam",
-      "hotels": [
-        {
-          "hotel": "",
-          "notes": ""
-        }
-      ],
-      "restaurants": [
-        {
-          "restaurant": "",
-          "notes": ""
-        }
-      ],
-      "day": [
-        {
-          "activity": "",
-          "notes": ""
-        }
-      ],
-      "night": [
-        {
-          "activity": "",
-          "notes": ""
-        }
-      ],
-      "id": 10
-    },
-    {
-      "destination": "Miami",
-      "hotels": [
-        {
-          "hotel": "",
-          "notes": ""
-        }
-      ],
-      "restaurants": [
-        {
-          "restaurant": "",
-          "notes": ""
-        }
-      ],
-      "day": [
-        {
-          "activity": "",
-          "notes": ""
-        }
-      ],
-      "night": [
-        {
-          "activity": "",
-          "notes": ""
-        }
-      ],
-      "id": 11
-    },
-    {
-      "destination": "Prague",
-      "hotels": [
-        {
-          "hotel": "",
-          "notes": ""
-        }
-      ],
-      "restaurants": [
-        {
-          "restaurant": "",
-          "notes": ""
-        }
-      ],
-      "day": [
-        {
-          "activity": "",
-          "notes": ""
-        }
-      ],
-      "night": [
-        {
-          "activity": "",
-          "notes": ""
-        }
-      ],
-      "id": 12
-    },
-    {
-      "destination": "Montreal",
-      "hotels": [
-        {
-          "hotel": "",
-          "notes": ""
-        },
-        {
-          "hotel": "The W",
-          "notes": "Party Hotel"
-        }
-      ],
-      "restaurants": [
-        {
-          "restaurant": "",
-          "notes": ""
-        },
-        {
-          "restaurant": "",
-          "notes": ""
-        }
-      ],
-      "day": [
-        {
-          "activity": "",
-          "notes": ""
-        },
-        {
-          "activity": "",
-          "notes": ""
-        }
-      ],
-      "night": [
-        {
-          "activity": "",
-          "notes": ""
-        },
-        {
-          "activity": "",
-          "notes": ""
-        }
-      ],
-      "id": 13
+      "id": 6
     }
   ]
 }

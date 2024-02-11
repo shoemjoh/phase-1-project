@@ -83,8 +83,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 } else {
                     // Destination doesn't exist, create a new one
                     console.log("destination doesn't exist")
-                    renderOneDestination(destinationObj)
                     addNewDestination(destinationObj);
+
                 }
                 destinationForm.reset();
             });
@@ -101,27 +101,12 @@ document.addEventListener("DOMContentLoaded", () => {
             body: JSON.stringify(destinationObj)
         })
             .then(res => res.json())
-            .then(data => console.log(data))
-
-    }
-
-    // Using mock backend using db.json server instead of remote API.
-    function getDestinations() {
-        // HTTP GET request to local server
-        // Run json-server --watch db.json in the terminal
-        fetch('http://localhost:3000/destinations')
-            .then((resp) => resp.json())
-            // Parse with json method
-            .then((data) => {
-                initializeDestinations(data)
+            .then(data => {
+                console.log(data)
+                renderOneDestination(data)
             })
-    }
-    // Render each of our destinations to the DOM
-    function initializeDestinations(data) {
-        console.log()
-        data.forEach(destination => renderOneDestination(destination))
-    }
 
+    }
     // DOM Render Functions
     function renderOneDestination(destination) {
         // Build city tile, line up to CSS style names for tile
@@ -154,6 +139,27 @@ document.addEventListener("DOMContentLoaded", () => {
         })
 
     }
+
+
+
+    // Using mock backend using db.json server instead of remote API.
+    function getDestinations() {
+        // HTTP GET request to local server
+        // Run json-server --watch db.json in the terminal
+        fetch('http://localhost:3000/destinations')
+            .then((resp) => resp.json())
+            // Parse with json method
+            .then((data) => {
+                initializeDestinations(data)
+            })
+    }
+    // Render each of our destinations to the DOM
+    function initializeDestinations(data) {
+        console.log()
+        data.forEach(destination => renderOneDestination(destination))
+    }
+
+
     // Pulls the destinations onto the page once the DOM loads.
     getDestinations();
 
@@ -170,14 +176,26 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function pullDestinationList(id) {
+        console.log(id)
+
         fetch(`http://localhost:3000/destinations/${id}`)
             .then(res => res.json())
             .then(data => {
                 console.log("Destination details:", data)
-                let log = document.querySelector('#destination-log');
-                log.innerHTML = `
+                let hotelList = "";
+
+                // Iterate through each hotel in the data object.
+                data.hotels.forEach(hotel => {
+                    hotelList += `<li>${hotel.hotel}: ${hotel.notes}</li>`;
+                })
+
+                let logElement = document.querySelector('#destination-log');
+                logElement.innerHTML = `
                 <h2>${data.destination}</h2>
-                <p>Hotels: ${data.hotels.map(hotel => hotel.hotel).join(", ")}</p>
+                <h3> Hotels </h3>
+               <ul>
+               ${hotelList}
+               </ul>
                 `;
 
 
