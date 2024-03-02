@@ -28,6 +28,10 @@
         {
           "activity": "Acme",
           "notes": "Fun dancing club underneath restaurant"
+        },
+        {
+          "activity": "Good Room",
+          "notes": "Great place to rent for a birthday party."
         }
       ],
       "id": 1
