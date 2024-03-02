@@ -6,7 +6,8 @@
     height: 5rem;
     display: inline-grid;
     margin: 1rem 2rem;
-    box-shadow: 3px 4px #090909
+    box-shadow: 3px 4px #090909;
+    position: relative;
 }
 
 .destinations {
@@ -58,19 +59,23 @@ label {
 }
 
 .delete-button {
+    position: absolute;
+    bottom: 0;
+    left: calc(50% + 25px);
+    /* Shift the button 10 pixels to the left */
+    transform: translateX(-50%);
+    padding: 0.5rem;
     outline: none;
-
-    /* Remove default gray background */
     background-color: transparent;
-
-    /* Additional styling options (optional) */
     border: none;
-    /* Remove any border */
-    /* Set desired text color */
     cursor: pointer;
-    /* Indicate clickability */
-    font-weight: bold
+    font-weight: bold;
+    z-index: 1;
+    /* Ensure the button is above other content */
+    visibility: visible;
+    /* Ensure the button is visible */
 }
+
 
 .hotel-list {
     margin-top: -100px;
