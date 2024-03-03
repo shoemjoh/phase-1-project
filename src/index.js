@@ -178,6 +178,8 @@ document.addEventListener("DOMContentLoaded", () => {
             .then(res => res.json())
             .then(data => {
                 console.log(data)
+                // Reload the page after deletion.
+                location.reload();
 
             })
     }

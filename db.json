@@ -37,25 +37,20 @@
       "id": 1
     },
     {
-      "destination": "Tokyo",
-      "hotels": [
-        {
-          "hotel": "four seasons",
-          "notes": "great"
-        }
-      ],
-      "restaurants": [],
-      "day": [],
-      "night": [],
-      "id": 2
-    },
-    {
       "destination": "London",
       "hotels": [],
       "restaurants": [],
       "day": [],
       "night": [],
       "id": 3
+    },
+    {
+      "destination": "Turks and Caicos",
+      "hotels": [],
+      "restaurants": [],
+      "day": [],
+      "night": [],
+      "id": 4
     }
   ]
 }
