@@ -38,7 +38,7 @@
 .name {
     width: 200px;
     height: 20px;
-    margin-right: 10px;
+    margin-right: 20px;
 }
 
 .notes {
@@ -53,14 +53,14 @@
 label {
     margin-right: 0.1px;
     /* Add spacing between label and input */
-    min-width: 125px;
+    min-width: 150px;
     /* Ensure labels have enough space */
     font-weight: bold;
 }
 
 .delete-button {
     position: absolute;
-    bottom: 0;
+    bottom: -5px;
     left: calc(50% + 30px);
     /* Shift the button 25 pixels to the left */
     transform: translateX(-50%);
@@ -78,7 +78,7 @@ label {
 
 .addto-button {
     position: absolute;
-    bottom: 0;
+    bottom: -5px;
     right: calc(50% + 10px);
     transform: translateX(-50%);
     padding: 0.5rem;
@@ -86,7 +86,7 @@ label {
     background-color: transparent;
     border: none;
     cursor: pointer;
-    font-size: large;
+    font-size: medium;
     z-index: 1;
     /* Ensure the button is above other content */
     visibility: visible;

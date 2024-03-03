@@ -117,6 +117,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 }
                 destinationForm.reset();
+                location.reload();
             });
     }
     // Is called when a new destination is added in the form.
@@ -165,7 +166,8 @@ document.addEventListener("DOMContentLoaded", () => {
         console.log(tile);
         // Style the tiles.
         tile.addEventListener('mouseover', () => {
-            tile.style.backgroundColor = 'green';
+            //const randomColor = `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`;
+            tile.style.backgroundColor = "lavender";
         })
         tile.addEventListener('mouseleave', () => {
             tile.style.backgroundColor = 'inherit';

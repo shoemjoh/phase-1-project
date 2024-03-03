@@ -6,6 +6,10 @@
         {
           "hotel": "Waldorf Astoria",
           "notes": "Located in midtown, old and ornate but surprisingly small rooms (just NYC hotels in general)."
+        },
+        {
+          "hotel": "Four Seasons",
+          "notes": "Test"
         }
       ],
       "restaurants": [
@@ -16,6 +20,10 @@
         {
           "restaurant": "Cucina Alba",
           "notes": "Combination of Beverly Hills Hotel and Swan Miami. Worth it."
+        },
+        {
+          "restaurant": "Cafe Chelsea",
+          "notes": "Set in the historic chelsea hotel, newly renovated, lively."
         }
       ],
       "day": [
@@ -37,10 +45,55 @@
       "id": 1
     },
     {
-      "destination": "Turks and Caicos",
+      "destination": "Paris",
+      "hotels": [
+        {
+          "hotel": "St. James",
+          "notes": "Lovely hotel set back in a courtyard. Older but ornate rooms, classic parisian breakfast area."
+        }
+      ],
+      "restaurants": [],
+      "day": [
+        {
+          "activity": "Merci",
+          "notes": "Great boutique market"
+        }
+      ],
+      "night": [],
+      "id": 2
+    },
+    {
+      "destination": "Zurich",
       "hotels": [],
       "restaurants": [],
       "day": [],
+      "night": [],
+      "id": 3
+    },
+    {
+      "destination": "Mexico City",
+      "hotels": [
+        {
+          "hotel": "Four Seasons",
+          "notes": "Located in the Roma Norte neighborhood, the hotel wraps around a lush courtyard where the hotel has set-up their restaurant seating area. Comfortable and clean rooms, good service, and a good deal relative to most four seasons."
+        }
+      ],
+      "restaurants": [
+        {
+          "restaurant": "Contramar",
+          "notes": "Incredible spot for lunch or dinner. Bustling at all times during the day. Amazing fresh fish that you put into tortillas to create tacos."
+        },
+        {
+          "restaurant": "Lardo",
+          "notes": "Located in the Condesa neighborhood. Fun atmosphere, nice interior, good wine and shareable dishes. "
+        }
+      ],
+      "day": [
+        {
+          "activity": "Mercado de Coyoacan",
+          "notes": "Iconic market with tons of stalls selling textiles, trinkets, art, food, and more. In the Coyoacan neighborhood, a short walk away from the Frida Kahlo house. About a 35 minute uber from downtown in non-rush hour. Recommend making a morning of it."
+        }
+      ],
       "night": [],
       "id": 4
     }
