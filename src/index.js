@@ -143,8 +143,8 @@ document.addEventListener("DOMContentLoaded", () => {
         tile.innerHTML = `
     <div>
         <h4>${destination.destination}<h4>
-        <button class="delete-button"> __ </button>
-        <button class="addto-destination-button">+</button>
+        <button class="delete-button">-</button>
+        <button class="addto-button">+</button>
     </div>
     `
         // Allow for delete button.
@@ -153,7 +153,7 @@ document.addEventListener("DOMContentLoaded", () => {
             deleteDestination(tile, destination.id)
         })
         // Allow for Add To Destination button.
-        tile.querySelector(".addto-destination-button").addEventListener('click', () => {
+        tile.querySelector(".addto-button").addEventListener('click', () => {
             const destinationText = destination.destination;
             const destinationInput = document.getElementById('destinations');
             destinationInput.value = destinationText;

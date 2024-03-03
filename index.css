@@ -61,21 +61,37 @@ label {
 .delete-button {
     position: absolute;
     bottom: 0;
-    left: calc(50% + 25px);
-    /* Shift the button 10 pixels to the left */
+    left: calc(50% + 30px);
+    /* Shift the button 25 pixels to the left */
     transform: translateX(-50%);
     padding: 0.5rem;
     outline: none;
     background-color: transparent;
     border: none;
     cursor: pointer;
-    font-weight: bold;
+    font-size: large;
     z-index: 1;
     /* Ensure the button is above other content */
     visibility: visible;
     /* Ensure the button is visible */
 }
 
+.addto-button {
+    position: absolute;
+    bottom: 0;
+    right: calc(50% + 10px);
+    transform: translateX(-50%);
+    padding: 0.5rem;
+    outline: none;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: large;
+    z-index: 1;
+    /* Ensure the button is above other content */
+    visibility: visible;
+    /* Ensure the button is visible */
+}
 
 .hotel-list {
     margin-top: -100px;
