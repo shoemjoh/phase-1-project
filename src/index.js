@@ -144,13 +144,22 @@ document.addEventListener("DOMContentLoaded", () => {
     <div>
         <h4>${destination.destination}<h4>
         <button class="delete-button"> __ </button>
+        <button class="addto-destination-button">+</button>
     </div>
     `
         // Allow for delete button.
         tile.querySelector(".delete-button").addEventListener('click', () => {
-            tile.remove()
-            deleteDestination(destination.id)
+            // tile.remove()
+            deleteDestination(tile, destination.id)
         })
+        // Allow for Add To Destination button.
+        tile.querySelector(".addto-destination-button").addEventListener('click', () => {
+            const destinationText = destination.destination;
+            const destinationInput = document.getElementById('destinations');
+            destinationInput.value = destinationText;
+            destinationInput.focus(); // Move focus to the destination field
+        })
+
         // Add city tile to DOM
         document.querySelector('#destination-list').appendChild(tile)
         console.log(tile);
@@ -167,21 +176,26 @@ document.addEventListener("DOMContentLoaded", () => {
         })
     }
     // Called when the delete button on the tile is clicked.
-    function deleteDestination(id) {
-        fetch(`http://localhost:3000/destinations/${id}`, {
-            method: 'DELETE',
-            headers: {
-                'Content-type': 'application / json'
+    function deleteDestination(tile, id) {
 
-            }
-        })
-            .then(res => res.json())
-            .then(data => {
-                console.log(data)
-                // Reload the page after deletion.
-                location.reload();
+        const confirmed = window.confirm("Are you sure you want to delete this destination?");
+        if (confirmed) {
+            tile.remove()
+            fetch(`http://localhost:3000/destinations/${id}`, {
+                method: 'DELETE',
+                headers: {
+                    'Content-type': 'application / json'
 
+                }
             })
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data)
+                    // Reload the page after deletion.
+                    location.reload();
+
+                })
+        }
     }
     // Shares the list of stored data for a specific destination.
     function pullDestinationList(id) {
