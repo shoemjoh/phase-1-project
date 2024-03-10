@@ -1,50 +1,6 @@
 {
   "destinations": [
     {
-      "destination": "New York",
-      "hotels": [
-        {
-          "hotel": "Waldorf Astoria",
-          "notes": "Located in midtown, old and ornate but surprisingly small rooms (just NYC hotels in general)."
-        },
-        {
-          "hotel": "Four Seasons",
-          "notes": "Test"
-        }
-      ],
-      "restaurants": [
-        {
-          "restaurant": "sushi nakazawa",
-          "notes": "Special sushi restuarant"
-        },
-        {
-          "restaurant": "Cucina Alba",
-          "notes": "Combination of Beverly Hills Hotel and Swan Miami. Worth it."
-        },
-        {
-          "restaurant": "Cafe Chelsea",
-          "notes": "Set in the historic chelsea hotel, newly renovated, lively."
-        }
-      ],
-      "day": [
-        {
-          "activity": "Highline",
-          "notes": "Walk along and view chelsea and the old train tracks"
-        }
-      ],
-      "night": [
-        {
-          "activity": "Acme",
-          "notes": "Fun dancing club underneath restaurant"
-        },
-        {
-          "activity": "Good Room",
-          "notes": "Great place to rent for a birthday party."
-        }
-      ],
-      "id": 1
-    },
-    {
       "destination": "Paris",
       "hotels": [
         {
@@ -61,14 +17,6 @@
       ],
       "night": [],
       "id": 2
-    },
-    {
-      "destination": "Zurich",
-      "hotels": [],
-      "restaurants": [],
-      "day": [],
-      "night": [],
-      "id": 3
     },
     {
       "destination": "Mexico City",
@@ -96,6 +44,24 @@
       ],
       "night": [],
       "id": 4
+    },
+    {
+      "destination": "New York",
+      "hotels": [],
+      "restaurants": [
+        {
+          "restaurant": "Libertine",
+          "notes": "Lovely french bistro in the west village. Highly recommend - salad maison (light, fresh, and perfectly dressed), scallops, gnocchi (best thing we had), saucisse puree (their go-to dish, sausage and mashed potatoes)."
+        }
+      ],
+      "day": [
+        {
+          "activity": "Highline",
+          "notes": "Walk along the west-side of manhattan through Meatpacking and Chelsea on a raised walkway with lush landscaping and great views of the city."
+        }
+      ],
+      "night": [],
+      "id": 5
     }
   ]
 }

@@ -167,7 +167,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // Style the tiles.
         tile.addEventListener('mouseover', () => {
             //const randomColor = `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`;
-            tile.style.backgroundColor = "lavender";
+            tile.style.backgroundColor = "gold";
         })
         tile.addEventListener('mouseleave', () => {
             tile.style.backgroundColor = 'inherit';
@@ -213,19 +213,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 // Iterate through each hotel in the data object.
                 data.hotels.forEach(hotel => {
-                    hotelList += `<li>${hotel.hotel}: ${hotel.notes}</li>`;
+                    hotelList += `<li><b>${hotel.hotel}</b>: ${hotel.notes}</li>`;
                 })
                 // Iterate through each restaurant in the data object.
                 data.restaurants.forEach(restaurant => {
-                    restaurantList += `<li>${restaurant.restaurant}: ${restaurant.notes}</li>`;
+                    restaurantList += `<li><b>${restaurant.restaurant}</b>: ${restaurant.notes}</li>`;
                 })
                 // Iterate through each day notes in the data object.
                 data.day.forEach(d => {
-                    dayList += `<li>${d.activity}: ${d.notes}</li>`;
+                    dayList += `<li><b>${d.activity}</b>: ${d.notes}</li>`;
                 })
                 // Iterate through each restaurant in the data object.
                 data.night.forEach(n => {
-                    nightList += `<li>${n.activity}: ${n.notes}</li>`;
+                    nightList += `<li><b>${n.activity}</b>: ${n.notes}</li>`;
                 })
 
                 let logElement = document.querySelector('#destination-log');
