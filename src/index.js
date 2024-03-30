@@ -173,7 +173,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     // Shares the list of stored data for a specific destination.
     function pullDestinationList(id) {
-        console.log(id)
+        console.log(`Destination: ${id}`)
         fetch(`http://localhost:3000/destinations/${id}`)
             .then(res => res.json())
             .then(data => {
@@ -223,7 +223,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 let deleteArray = Array.from(logElement.querySelectorAll('.d-btn'))
                 deleteArray.forEach((btn) => {
-                    btn.addEventListener('click', deleteHotelItem)
+                    btn.addEventListener('click', function () {
+                        const hotelIndex = this.getAttribute('data-hotel-index');
+                        const destinationIndex = this.getAttribute('data-destination-index')
+                        deleteHotelItem(hotelIndex, destinationIndex)
+                    })
                 })
                 console.log(deleteArray)
                 console.log("Updated logElement")
