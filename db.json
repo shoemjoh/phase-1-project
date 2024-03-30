@@ -8,7 +8,12 @@
           "notes": "Lovely hotel set back in a courtyard. Older but ornate rooms, classic parisian breakfast area."
         }
       ],
-      "restaurants": [],
+      "restaurants": [
+        {
+          "restaurant": "Benoit",
+          "notes": "Classic parisian restaurant serving rich dishes like snails, foie gras, and tenderloin. Has a Michelin star but felt a bit touristy and the food was a little disappointing."
+        }
+      ],
       "day": [
         {
           "activity": "Merci",
@@ -52,6 +57,10 @@
         {
           "restaurant": "Libertine",
           "notes": "Lovely french bistro in the west village. Highly recommend - salad maison (light, fresh, and perfectly dressed), scallops, gnocchi (best thing we had), saucisse puree (their go-to dish, sausage and mashed potatoes)."
+        },
+        {
+          "restaurant": "King's County",
+          "notes": "Great spot for takeout or to dine-in. One of the best Chinese spots in the city - get the general tso's chicken, fried rice, egg rolls, and dumplings."
         }
       ],
       "day": [
@@ -60,7 +69,12 @@
           "notes": "Walk along the west-side of manhattan through Meatpacking and Chelsea on a raised walkway with lush landscaping and great views of the city."
         }
       ],
-      "night": [],
+      "night": [
+        {
+          "activity": "Acme",
+          "notes": "In Noho, the bar below the restaurant is a great spot for dancing and drinks. Difficult to get in as a walk-up but possible if you reserve an \"affordable\" cocktail table for a group."
+        }
+      ],
       "id": 5
     }
   ]

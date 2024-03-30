@@ -212,10 +212,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 let nightList = "";
 
                 // Iterate through each hotel in the data object.
-                data.hotels.forEach(hotel => {
-                    hotelList += `<li><b>${hotel.hotel}</b>: ${hotel.notes}</li>`;
+                data.hotels.forEach((hotel, index) => {
+                    hotelList += `<li><b>${hotel.hotel}</b>: ${hotel.notes} <button class="delete-btn" data-hotel-index="${index}" data-destination-id="$${id}">-</button> </li>`;
+                    // Iterate through each restaurant in the data object.
                 })
-                // Iterate through each restaurant in the data object.
                 data.restaurants.forEach(restaurant => {
                     restaurantList += `<li><b>${restaurant.restaurant}</b>: ${restaurant.notes}</li>`;
                 })
@@ -249,6 +249,10 @@ document.addEventListener("DOMContentLoaded", () => {
                </ul>
                 `;
             })
+    }
+
+    function deleteHotelItem(hotelIndex, destinationID) {
+        console.log(`Deleting hotel at index ${hotelIndex} for destination ${destinationID}.`)
     }
     // Using mock backend using db.json server instead of remote API.
     function getDestinations() {
