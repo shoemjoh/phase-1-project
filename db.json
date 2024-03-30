@@ -6,12 +6,44 @@
         {
           "hotel": "St. James",
           "notes": "Lovely hotel set back in a courtyard. Older but ornate rooms, classic parisian breakfast area."
+        },
+        {
+          "hotel": "Ritz",
+          "notes": "test"
+        },
+        {
+          "hotel": "3",
+          "notes": "Test"
+        },
+        {
+          "hotel": "test",
+          "notes": "8"
+        },
+        {
+          "hotel": "test",
+          "notes": "9"
+        },
+        {
+          "hotel": "test",
+          "notes": "10"
+        },
+        {
+          "hotel": "Test",
+          "notes": "11"
+        },
+        {
+          "hotel": "test",
+          "notes": "12"
         }
       ],
       "restaurants": [
         {
           "restaurant": "Benoit",
           "notes": "Classic parisian restaurant serving rich dishes like snails, foie gras, and tenderloin. Has a Michelin star but felt a bit touristy and the food was a little disappointing."
+        },
+        {
+          "restaurant": "X",
+          "notes": "Test"
         }
       ],
       "day": [

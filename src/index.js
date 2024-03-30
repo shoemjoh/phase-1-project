@@ -6,33 +6,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const destinationForm = document.querySelector(".add-destination-form")
     const deleteBtn = document.querySelector(".delete-button")
 
-    // EVENT LISTENER: Submit event on the destination form. Call handleReviewEvent which takes the inputs from the form and:
-
-    // Handle Review Event function
-    // 1. Creates a new destination object to push the input values to (if they exist).
-    // 2. Fetches the data stored in the db.json.
-    // 3. Checks the new destination obj "destination (city)" to see if it exists in the json database already. Uses the array method "find" to search for where the destination may exist in an object in the array.
-    // 4. Sets the variable existing destination equal to the object that is found.
-    // 5. Then makes a copy of the existing destination calls it 'updated destination'.
-    // 6. Next, it pushes a copy of the input values of the form, stored in destinationObj, to the updated destination object.
-    // 7. It does this for hotels, restaurants, day activities, and night activities.
-    // 8. It then takes the Updated Destination Obj and calls a PUT request to the json server. Fetch with the filepath referencing the existing destination's id in the URL, method, headers, body. Then res and res.jsonify(), then the updated object and pass it to a callback function which just logs it. It seems the difference between POST and PUT is whether you are updating or adding a new object to the array.
-    // 9. If it's NOT an existing destination, it calls the addNewDestination function, with the destinationObj as the parameter.
-
-    // Add new destintation function.
-    // 1. Takes the destinationObj created by the form submission (we know it's a new destination) and POSTs it to the database.
-    // 2. Which then sends a response (promise), which we take and call the .json() method and then pass the json data into a callback function that calls renderOneDestination.
-
-    // Render a new destination to the DOM.
-    // 1. Takes the new destinationObj as a parameter. 
-    // 2. Creates a list item element; we store it as a tile. Give it a class name of tile.
-    // 3. Set the innerHMTL to be the destination name (destination.destination) and add a delete button with a class of delete button.
-    // 4. Add an Event Listener to the delete button. LIKELY WANT TO ADD AN "ARE YOU SURE? " pop-up. This calls the deleteDestination function.
-    // 5. Add the destination tile to the DOM by grabbing the <div> area called destination list and appending the list item "tile" as a child to the area.
-    // 6. Add a mouseover event listener to the tiles, this creates a color-changing affect when the user hovers over the tile. A second event listener inherits the background color when the mouse leaves the tile.
-    // 7. Finally, adds a click event listener to each tile. When the tile is clicked, the pullDestinationList is called.
-
-
     destinationForm.addEventListener('submit', handleReviewEvent)
     // Handle a form submission event.
     function handleReviewEvent(e) {
@@ -117,7 +90,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 }
                 destinationForm.reset();
-                location.reload();
             });
     }
     // Is called when a new destination is added in the form.
@@ -213,9 +185,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 // Iterate through each hotel in the data object.
                 data.hotels.forEach((hotel, index) => {
-                    hotelList += `<li><b>${hotel.hotel}</b>: ${hotel.notes} <button class="delete-btn" data-hotel-index="${index}" data-destination-id="$${id}">-</button> </li>`;
-                    // Iterate through each restaurant in the data object.
+                    hotelList += `<li><b>${hotel.hotel}</b>: ${hotel.notes} <button class="d-btn" data-hotel-index=${index} data-destination-index=${id}>-</button></li>`;
                 })
+                // Iterate through each restaurant in the data object.
                 data.restaurants.forEach(restaurant => {
                     restaurantList += `<li><b>${restaurant.restaurant}</b>: ${restaurant.notes}</li>`;
                 })
@@ -248,8 +220,19 @@ document.addEventListener("DOMContentLoaded", () => {
                ${nightList}
                </ul>
                 `;
+
+                let deleteArray = Array.from(logElement.querySelectorAll('.d-btn'))
+                deleteArray.forEach((btn) => {
+                    btn.addEventListener('click', deleteHotelItem)
+                })
+                console.log(deleteArray)
+                console.log("Updated logElement")
+
             })
     }
+
+
+
 
     function deleteHotelItem(hotelIndex, destinationID) {
         console.log(`Deleting hotel at index ${hotelIndex} for destination ${destinationID}.`)
