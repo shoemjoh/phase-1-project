@@ -8,28 +8,12 @@
           "notes": "Lovely hotel set back in a courtyard. Older but ornate rooms, classic parisian breakfast area."
         },
         {
-          "hotel": "3",
-          "notes": "Test"
-        },
-        {
           "hotel": "test",
           "notes": "8"
         },
         {
           "hotel": "test",
-          "notes": "9"
-        },
-        {
-          "hotel": "test",
           "notes": "10"
-        },
-        {
-          "hotel": "Test",
-          "notes": "11"
-        },
-        {
-          "hotel": "test",
-          "notes": "12"
         }
       ],
       "restaurants": [

@@ -1,0 +1,125 @@
+/* Base styles and fonts */
+body,
+h1,
+h2,
+h3,
+p {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    /* Lato for a stylish look */
+    color: #000;
+    /* Keeping fonts black as requested */
+}
+
+body {
+    background-color: #f0f0f0;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.header {
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    padding: 20px;
+}
+
+.header h1 {
+    font-size: 26px;
+    font-weight: 700;
+    /* Bold for the main title */
+}
+
+.header a {
+    color: #000;
+    /* Black for readability */
+    text-decoration: none;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    /* Centering the container */
+    background-color: #fff;
+    padding: 25px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-group label {
+    font-weight: 400;
+    /* Regular weight for subtlety */
+}
+
+/* Tiles */
+#destination-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    /* Reduced gap for compactness */
+    justify-content: space-around;
+    /* Evenly distribute space */
+}
+
+.tile {
+    width: 150px;
+    /* Smaller width for compact tiles */
+    height: 150px;
+    /* Equal height for square shape */
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.tile:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px);
+    /* Slight lift for interactivity */
+}
+
+.tile h4 {
+    font-size: 16px;
+    /* Adjusted for compact tile size */
+    font-weight: 700;
+    /* Bold for emphasis */
+    margin: 10px 0;
+    /* Reduced margin */
+}
+
+/* Buttons */
+.delete-button,
+.addto-button {
+    padding: 4px 8px;
+    /* Smaller padding for compactness */
+    font-size: 12px;
+    /* Smaller font size for buttons */
+    margin-top: 10px;
+    /* Spacing from content to button */
+    border-radius: 4px;
+    /* Subtle roundness */
+}
+
+.delete-button {
+    background-color: #ff5a5f;
+    /* A stylish red */
+    color: #fff;
+}
+
+.addto-button {
+    background-color: #4CAF50;
+    /* A vibrant green */
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    #destination-list {
+        justify-content: center;
+        /* Ensure center alignment on smaller screens */
+    }
+}

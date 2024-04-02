@@ -1,0 +1,146 @@
+/* Reset and base styles */
+body,
+h1,
+h2,
+h3,
+p {
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+body {
+    background-color: #fafafa;
+    /* Lighter gray for a soft look */
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+    padding: 20px 0;
+    /* Increased padding for a taller header */
+}
+
+.header h1 {
+    font-size: 28px;
+    /* Slightly larger for emphasis */
+    font-weight: 300;
+    /* Lighter font-weight for elegance */
+}
+
+.header a {
+    color: #333;
+    text-decoration: none;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 25px;
+    /* Increased padding for more space */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    max-width: 800px;
+    /* Max width for better readability */
+    margin: 0 auto;
+    /* Center the container */
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 400;
+    /* Lighter font-weight */
+    color: #555;
+    /* Slightly darker for contrast */
+}
+
+.form-group input[type="text"] {
+    width: calc(100% - 20px);
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    /* Subtle inset shadow */
+}
+
+.submit {
+    display: block;
+    /* Change to block for full width */
+    background-color: #007bff;
+    /* Stylish blue */
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    /* Full width */
+    font-weight: 400;
+}
+
+.submit:hover {
+    background-color: #0056b3;
+    /* Darker blue on hover */
+}
+
+/* Tiles and responsiveness */
+#destination-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* Adjusted for space between */
+    gap: 20px;
+    padding: 20px;
+}
+
+.tile {
+    flex: 1;
+    /* Flex grow */
+    min-width: 180px;
+    /* Minimum width */
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 10px;
+    /* Rounded for elegance */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tile:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.tile h4,
+.tile div {
+    padding: 5px;
+    width: 100%;
+}
+
+.tile h4 {
+    font-size: 18px;
+    font-weight: 400;
+    color: #007bff;
+    /* Blue to match the submit button */
+}
+
+@media (max-width: 768px) {
+    #destination-list {
+        justify-content: center;
+    }
+}
