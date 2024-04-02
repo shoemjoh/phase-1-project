@@ -244,6 +244,29 @@ document.addEventListener("DOMContentLoaded", () => {
         if (confirmDelete) {
             const itemID = `hotel-${hotelIndex}`
             document.getElementById(itemID).remove();
+            fetch(`http://localhost:3000/destinations/${destinationID}`, {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            })
+                .then(res => res.json())
+                .then(destination => {
+                    destination.hotels.splice(hotelIndex, 1);
+
+                    // Send updated destination object back to database.
+                    fetch(`http://localhost:3000/destinations/${destinationID}`, {
+                        method: 'PUT',
+                        headers: {
+                            'Content-type': 'application/json',
+                        },
+                        body: JSON.stringify(destination),
+                    })
+                        .then(res => res.json())
+                        .then(updatedDestination => {
+                            console.log('Hotel deleted', updatedDestination)
+                        })
+                })
         }
         console.log(`Deleting hotel at index ${hotelIndex} for destination ${destinationID}.`)
     }

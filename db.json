@@ -8,10 +8,6 @@
           "notes": "Lovely hotel set back in a courtyard. Older but ornate rooms, classic parisian breakfast area."
         },
         {
-          "hotel": "Ritz",
-          "notes": "test"
-        },
-        {
           "hotel": "3",
           "notes": "Test"
         },
@@ -34,10 +30,6 @@
         {
           "hotel": "test",
           "notes": "12"
-        },
-        {
-          "hotel": "Ritz",
-          "notes": "test"
         }
       ],
       "restaurants": [
