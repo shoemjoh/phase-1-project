@@ -34,6 +34,10 @@
         {
           "hotel": "test",
           "notes": "12"
+        },
+        {
+          "hotel": "Ritz",
+          "notes": "test"
         }
       ],
       "restaurants": [

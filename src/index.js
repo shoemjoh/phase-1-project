@@ -185,7 +185,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 // Iterate through each hotel in the data object.
                 data.hotels.forEach((hotel, index) => {
-                    hotelList += `<li><b>${hotel.hotel}</b>: ${hotel.notes} <button class="d-btn" data-hotel-index=${index} data-destination-index=${id}>-</button></li>`;
+                    hotelList += `<li id=hotel-${index}><b>${hotel.hotel}</b>: ${hotel.notes} <button class="d-btn" data-hotel-index=${index} data-destination-index=${id}>-</button></li>`;
                 })
                 // Iterate through each restaurant in the data object.
                 data.restaurants.forEach(restaurant => {
@@ -226,6 +226,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     btn.addEventListener('click', function () {
                         const hotelIndex = this.getAttribute('data-hotel-index');
                         const destinationIndex = this.getAttribute('data-destination-index')
+                        // const entry = this.getElementById(`#hotel-${index}`)
                         deleteHotelItem(hotelIndex, destinationIndex)
                     })
                 })
@@ -237,10 +238,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-
-    function deleteHotelItem(hotelIndex, destinationID) {
+    // Function to delete a hotel entry.
+    function deleteHotelItem(hotelIndex, destinationID, entry) {
+        const confirmDelete = window.confirm("Are you sure you want to delete this entry?");
+        if (confirmDelete) {
+            const itemID = `hotel-${hotelIndex}`
+            document.getElementById(itemID).remove();
+        }
         console.log(`Deleting hotel at index ${hotelIndex} for destination ${destinationID}.`)
     }
+
+
     // Using mock backend using db.json server instead of remote API.
     function getDestinations() {
         // HTTP GET request to local server
