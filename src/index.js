@@ -188,16 +188,16 @@ document.addEventListener("DOMContentLoaded", () => {
                     hotelList += `<li id=hotel-${index}><b>${hotel.hotel}</b>: ${hotel.notes} <button class="d-btn" data-hotel-index=${index} data-destination-index=${id}>-</button></li>`;
                 })
                 // Iterate through each restaurant in the data object.
-                data.restaurants.forEach(restaurant => {
-                    restaurantList += `<li><b>${restaurant.restaurant}</b>: ${restaurant.notes}</li>`;
+                data.restaurants.forEach((restaurant, index) => {
+                    restaurantList += `<li id=restaurant-${index}><b>${restaurant.restaurant}</b>: ${restaurant.notes} <button class="d-btn" data-restaurant-index=${index} data-destination-index=${id}>-</button></li>`;
                 })
                 // Iterate through each day notes in the data object.
-                data.day.forEach(d => {
-                    dayList += `<li><b>${d.activity}</b>: ${d.notes}</li>`;
+                data.day.forEach((d, index) => {
+                    dayList += `<li id=day-${index}><b>${d.activity}</b>: ${d.notes} <button class="d-btn" data-day-index=${index} data-destination-index=${id}>-</button></li>`;
                 })
                 // Iterate through each restaurant in the data object.
                 data.night.forEach(n => {
-                    nightList += `<li><b>${n.activity}</b>: ${n.notes}</li>`;
+                    nightList += `<li id=night-${index}><b>${n.activity}</b>: ${n.notes} <button class="d-btn" data-night-index=${index} data-destination-index${id}>-</button></li>`;
                 })
 
                 let logElement = document.querySelector('#destination-log');
@@ -222,6 +222,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 `;
 
                 let deleteArray = Array.from(logElement.querySelectorAll('.d-btn'))
+                // might need to get specific for which buttons we are selecting
                 deleteArray.forEach((btn) => {
                     btn.addEventListener('click', function () {
                         const hotelIndex = this.getAttribute('data-hotel-index');
