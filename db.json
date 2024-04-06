@@ -5,17 +5,13 @@
       "hotels": [
         {
           "hotel": "St. James",
-          "notes": "Lovely hotel set back in a courtyard. Older but ornate rooms, classic parisian breakfast area."
+          "notes": "Lovely classic hotel tucked away in a courtyard in the 16th arrondissement walking distance from the Arc de Triomphe. Felt more residential and less touristy but luxorious."
         }
       ],
       "restaurants": [
         {
           "restaurant": "Benoit",
           "notes": "Classic parisian restaurant serving rich dishes like snails, foie gras, and tenderloin. Has a Michelin star but felt a bit touristy and the food was a little disappointing."
-        },
-        {
-          "restaurant": "X",
-          "notes": "Test"
         }
       ],
       "day": [
@@ -43,6 +39,10 @@
         {
           "restaurant": "Lardo",
           "notes": "Located in the Condesa neighborhood. Fun atmosphere, nice interior, good wine and shareable dishes. "
+        },
+        {
+          "restaurant": "Test",
+          "notes": "1"
         }
       ],
       "day": [

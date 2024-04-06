@@ -226,9 +226,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 deleteArray.forEach((btn) => {
                     btn.addEventListener('click', function () {
                         const hotelIndex = this.getAttribute('data-hotel-index');
-                        const destinationIndex = this.getAttribute('data-destination-index')
+                        const restaurantIndex = this.getAttribute('data-restaurant-index');
+                        const destinationIndex = this.getAttribute('data-destination-index');
                         // const entry = this.getElementById(`#hotel-${index}`)
-                        deleteHotelItem(hotelIndex, destinationIndex)
+                        deleteDestinationItem(hotelIndex, restaurantIndex, destinationIndex)
                     })
                 })
                 console.log(deleteArray)
@@ -240,36 +241,71 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     // Function to delete a hotel entry.
-    function deleteHotelItem(hotelIndex, destinationID, entry) {
+    function deleteDestinationItem(hotelIndex, restaurantIndex, destinationID, entry) {
         const confirmDelete = window.confirm("Are you sure you want to delete this entry?");
-        if (confirmDelete) {
-            const itemID = `hotel-${hotelIndex}`
-            document.getElementById(itemID).remove();
-            fetch(`http://localhost:3000/destinations/${destinationID}`, {
-                method: 'GET',
-                headers: {
-                    'Content-Type': 'application/json',
-                }
-            })
-                .then(res => res.json())
-                .then(destination => {
-                    destination.hotels.splice(hotelIndex, 1);
 
-                    // Send updated destination object back to database.
-                    fetch(`http://localhost:3000/destinations/${destinationID}`, {
-                        method: 'PUT',
-                        headers: {
-                            'Content-type': 'application/json',
-                        },
-                        body: JSON.stringify(destination),
-                    })
-                        .then(res => res.json())
-                        .then(updatedDestination => {
-                            console.log('Hotel deleted', updatedDestination)
-                        })
+        if (confirmDelete) {
+            if (hotelIndex) {
+                const itemID = `hotel-${hotelIndex}`
+                document.getElementById(itemID).remove();
+                fetch(`http://localhost:3000/destinations/${destinationID}`, {
+                    method: 'GET',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    }
                 })
+                    .then(res => res.json())
+                    .then(destination => {
+                        destination.hotels.splice(hotelIndex, 1);
+
+                        // Send updated destination object back to database.
+                        fetch(`http://localhost:3000/destinations/${destinationID}`, {
+                            method: 'PUT',
+                            headers: {
+                                'Content-type': 'application/json',
+                            },
+                            body: JSON.stringify(destination),
+                        })
+                            .then(res => res.json())
+                            .then(updatedDestination => {
+                                console.log('Hotel deleted', updatedDestination)
+                            })
+                    })
+                console.log(`Deleting hotel at index ${hotelIndex} for destination ${destinationID}.`)
+
+            }
+            if (restaurantIndex) {
+                const itemID = `restaurant-${restaurantIndex}`
+                console.log(itemID)
+                document.getElementById(itemID).remove();
+                fetch(`http://localhost:3000/destinations/${destinationID}`, {
+                    method: 'GET',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    }
+                })
+                    .then(res => res.json())
+                    .then(destination => {
+                        destination.restaurants.splice(restaurantIndex, 1);
+
+                        // Send updated destination object back to database.
+                        fetch(`http://localhost:3000/destinations/${destinationID}`, {
+                            method: 'PUT',
+                            headers: {
+                                'Content-type': 'application/json',
+                            },
+                            body: JSON.stringify(destination),
+                        })
+                            .then(res => res.json())
+                            .then(updatedDestinationObj => {
+                                console.log('Restaurant deleted', updatedDestinationObj)
+                            })
+                    })
+                console.log(`Deleting restaurant at index ${restaurantIndex} for destination ${destinationID}.`)
+            }
+
         }
-        console.log(`Deleting hotel at index ${hotelIndex} for destination ${destinationID}.`)
+
     }
 
 
