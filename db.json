@@ -6,14 +6,6 @@
         {
           "hotel": "St. James",
           "notes": "Lovely hotel set back in a courtyard. Older but ornate rooms, classic parisian breakfast area."
-        },
-        {
-          "hotel": "test",
-          "notes": "8"
-        },
-        {
-          "hotel": "test",
-          "notes": "10"
         }
       ],
       "restaurants": [

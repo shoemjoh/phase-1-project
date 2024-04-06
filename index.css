@@ -76,6 +76,8 @@ label {
     /* Ensure the button is visible */
 }
 
+
+
 .addto-button {
     position: absolute;
     bottom: -5px;
@@ -95,5 +97,11 @@ label {
 
 .hotel-list {
     margin-top: -100px;
-    /* Adjust the value as needed */
+}
+
+.d-btn {
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    font-weight: bold;
 }
