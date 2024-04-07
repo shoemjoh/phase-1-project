@@ -39,10 +39,6 @@
         {
           "restaurant": "Lardo",
           "notes": "Located in the Condesa neighborhood. Fun atmosphere, nice interior, good wine and shareable dishes. "
-        },
-        {
-          "restaurant": "Test",
-          "notes": "1"
         }
       ],
       "day": [
@@ -80,6 +76,45 @@
         }
       ],
       "id": 5
+    },
+    {
+      "destination": "London",
+      "hotels": [
+        {
+          "hotel": "The Kensington",
+          "notes": "Beautiful hotel in Kensington, reasonably priced, small but clean rooms, great gym and restaurant. Have a drink by the fireplace in the cozy sitting room off the lobby."
+        }
+      ],
+      "restaurants": [],
+      "day": [],
+      "night": [
+        {
+          "activity": "Test",
+          "notes": "1"
+        },
+        {
+          "activity": "Test",
+          "notes": "1"
+        },
+        {
+          "activity": "test ",
+          "notes": "2"
+        }
+      ],
+      "id": 6
+    },
+    {
+      "destination": "Palm Springs",
+      "hotels": [
+        {
+          "hotel": "The Parker",
+          "notes": "Luxurious but artistic hotel with great pool scenes, tasty breakfast restaurant, and lobby bar that will take you late into the night."
+        }
+      ],
+      "restaurants": [],
+      "day": [],
+      "night": [],
+      "id": 7
     }
   ]
 }

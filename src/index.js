@@ -115,7 +115,7 @@ document.addEventListener("DOMContentLoaded", () => {
         tile.className = 'tile'
         tile.innerHTML = `
     <div>
-        <h4>${destination.destination}<h4>
+        <h4>${destination.destination}</h4>
         <button class="delete-button">-</button>
         <button class="addto-button">+</button>
     </div>
@@ -193,11 +193,16 @@ document.addEventListener("DOMContentLoaded", () => {
                 })
                 // Iterate through each day notes in the data object.
                 data.day.forEach((d, index) => {
+                    console.log(`Index when we iterate through and create the dayList! ${index}`)
                     dayList += `<li id=day-${index}><b>${d.activity}</b>: ${d.notes} <button class="d-btn" data-day-index=${index} data-destination-index=${id}>-</button></li>`;
+                    console.log(`Destination ID when we create the daylist! ${id}`)
                 })
-                // Iterate through each restaurant in the data object.
-                data.night.forEach(n => {
-                    nightList += `<li id=night-${index}><b>${n.activity}</b>: ${n.notes} <button class="d-btn" data-night-index=${index} data-destination-index${id}>-</button></li>`;
+                // Iterate through each night in the data object.
+                data.night.forEach((n, index) => {
+                    console.log(`Index when we iterate through and create the nightList! ${index}`)
+                    nightList += `<li id=night-${index}><b>${n.activity}</b>: ${n.notes} <button class="d-btn" data-night-index=${index} data-destination-index=${id}>-</button></li>`;
+                    console.log(`Destination ID when we create the nightlist! ${id}`)
+
                 })
 
                 let logElement = document.querySelector('#destination-log');
@@ -227,13 +232,16 @@ document.addEventListener("DOMContentLoaded", () => {
                     btn.addEventListener('click', function () {
                         const hotelIndex = this.getAttribute('data-hotel-index');
                         const restaurantIndex = this.getAttribute('data-restaurant-index');
+                        const dayIndex = this.getAttribute('data-day-index');
+                        const nightIndex = this.getAttribute('data-night-index');
                         const destinationIndex = this.getAttribute('data-destination-index');
                         // const entry = this.getElementById(`#hotel-${index}`)
-                        deleteDestinationItem(hotelIndex, restaurantIndex, destinationIndex)
+                        deleteDestinationItem(hotelIndex, restaurantIndex, dayIndex, nightIndex, destinationIndex)
                     })
                 })
                 console.log(deleteArray)
                 console.log("Updated logElement")
+                console.log(`${id} this is the destination we selected!`)
 
             })
     }
@@ -241,7 +249,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     // Function to delete a hotel entry.
-    function deleteDestinationItem(hotelIndex, restaurantIndex, destinationID, entry) {
+    function deleteDestinationItem(hotelIndex, restaurantIndex, dayIndex, nightIndex, destinationID) {
         const confirmDelete = window.confirm("Are you sure you want to delete this entry?");
 
         if (confirmDelete) {
@@ -302,6 +310,65 @@ document.addEventListener("DOMContentLoaded", () => {
                             })
                     })
                 console.log(`Deleting restaurant at index ${restaurantIndex} for destination ${destinationID}.`)
+            }
+            if (dayIndex) {
+                console.log(`Destination ID when we try to delete a day activity ${destinationID}`)
+                const itemID = `day-${dayIndex}`
+                document.getElementById(itemID).remove();
+                fetch(`http://localhost:3000/destinations/${destinationID}`, {
+                    method: 'GET',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    }
+                })
+                    .then(res => res.json())
+                    .then(destination => {
+                        destination.day.splice(dayIndex, 1);
+
+                        // Send updated destination object back to database.
+                        fetch(`http://localhost:3000/destinations/${destinationID}`, {
+                            method: 'PUT',
+                            headers: {
+                                'Content-type': 'application/json',
+                            },
+                            body: JSON.stringify(destination),
+                        })
+                            .then(res => res.json())
+                            .then(updatedDestination => {
+                                console.log('Day deleted', updatedDestination)
+                            })
+                    })
+                console.log(`Deleting day activity at index ${dayIndex} for destination ${destinationID}.`)
+            }
+            if (nightIndex) {
+                console.log(`Destination ID when we try to delete a night activity ${destinationID}`)
+                const itemID = `night-${nightIndex}`
+                console.log(`It got to ${nightIndex}`)
+                document.getElementById(itemID).remove();
+                fetch(`http://localhost:3000/destinations/${destinationID}`, {
+                    method: 'GET',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    }
+                })
+                    .then(res => res.json())
+                    .then(destination => {
+                        destination.night.splice(nightIndex, 1);
+
+                        // Send updated destination object back to database.
+                        fetch(`http://localhost:3000/destinations/${destinationID}`, {
+                            method: 'PUT',
+                            headers: {
+                                'Content-type': 'application/json',
+                            },
+                            body: JSON.stringify(destination),
+                        })
+                            .then(res => res.json())
+                            .then(updatedDestination => {
+                                console.log('Night deleted', updatedDestination)
+                            })
+                    })
+                console.log(`Deleting night activity at index ${nightIndex} for destination ${destinationID}.`)
             }
 
         }

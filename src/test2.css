@@ -1,0 +1,126 @@
+/* Global settings for a chic and stylish look */
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #fff;
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+/* Header styles for a clean, spaced look */
+.header {
+    background-color: #fff;
+    padding: 20px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #333;
+}
+
+.header h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.header a,
+.header span {
+    color: #333;
+    text-decoration: none;
+}
+
+/* Container and form styling for good spacing and alignment */
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #333;
+}
+
+input[type=text],
+input[type=submit] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type=submit] {
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #555;
+}
+
+/* Styling for destination list and log */
+#destination-list,
+#destination-log {
+    margin-top: 40px;
+}
+
+.tile {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.delete-button,
+.addto-button {
+    cursor: pointer;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 12px;
+}
+
+.addto-button {
+    background-color: #666;
+}
+
+.delete-button:hover,
+.addto-button:hover {
+    opacity: 0.8;
+}
+
+/* Hover effects */
+.tile:hover {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Specific styles for the destination log */
+#destination-log h2 {
+    font-size: 20px;
+    margin-top: 0;
+}
+
+#destination-log ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#destination-log li {
+    padding: 8px;
+    border-bottom: 1px solid #eee;
+}
+
+#destination-log li:last-child {
+    border: none;
+}
