@@ -139,7 +139,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // Style the tiles.
         tile.addEventListener('mouseover', () => {
             //const randomColor = `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`;
-            tile.style.backgroundColor = "gold";
+            tile.style.backgroundColor = "#993246";
         })
         tile.addEventListener('mouseleave', () => {
             tile.style.backgroundColor = 'inherit';

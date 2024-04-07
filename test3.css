@@ -1,0 +1,103 @@
+.tile {
+    text-align: center;
+    border: grey solid 1px;
+    padding: 1rem;
+    width: 5rem;
+    height: 5rem;
+    display: inline-grid;
+    margin: 1rem 2rem;
+    box-shadow: 3px 4px #090909;
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+    /* Roboto for tile text */
+}
+
+.destinations {
+    width: 200px;
+    height: 20px;
+    font-family: 'Roboto', sans-serif;
+    /* Consistent font */
+}
+
+.add-destination-form {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: 'Roboto', sans-serif;
+    /* Consistent form font */
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.1px;
+    font-family: 'Roboto', sans-serif;
+    /* Consistent font usage */
+}
+
+.name,
+.notes {
+    width: 200px;
+    height: 20px;
+    margin-right: 20px;
+    font-family: 'Roboto', sans-serif;
+    /* Roboto for inputs */
+}
+
+.notes {
+    width: 750px;
+    /* Adjusted for notes specifically */
+    height: 20px;
+}
+
+.submit {
+    width: 100px;
+    font-family: 'Roboto', sans-serif;
+    /* Button font */
+}
+
+label {
+    margin-right: 0.1px;
+    min-width: 150px;
+    font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
+    /* Open Sans for labels */
+}
+
+.delete-button,
+.addto-button {
+    position: absolute;
+    bottom: -5px;
+    left: calc(50% + 30px);
+    transform: translateX(-50%);
+    padding: 0.5rem;
+    outline: none;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: large;
+    z-index: 1;
+    visibility: visible;
+    font-family: 'Roboto', sans-serif;
+    /* Consistent button font */
+}
+
+.addto-button {
+    right: calc(50% + 10px);
+    /* Position adjustment for add-to button */
+}
+
+.hotel-list {
+    margin-top: -100px;
+}
+
+.d-btn {
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    /* Action button font */
+}

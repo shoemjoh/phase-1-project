@@ -14,12 +14,7 @@
           "notes": "Classic parisian restaurant serving rich dishes like snails, foie gras, and tenderloin. Has a Michelin star but felt a bit touristy and the food was a little disappointing."
         }
       ],
-      "day": [
-        {
-          "activity": "Merci",
-          "notes": "Great boutique market"
-        }
-      ],
+      "day": [],
       "night": [],
       "id": 2
     },
@@ -39,12 +34,20 @@
         {
           "restaurant": "Lardo",
           "notes": "Located in the Condesa neighborhood. Fun atmosphere, nice interior, good wine and shareable dishes. "
+        },
+        {
+          "restaurant": "Pujol",
+          "notes": "Amazing tasting menu set in beautiful interior in the polanco neighborhood of mexico city."
         }
       ],
       "day": [
         {
           "activity": "Mercado de Coyoacan",
           "notes": "Iconic market with tons of stalls selling textiles, trinkets, art, food, and more. In the Coyoacan neighborhood, a short walk away from the Frida Kahlo house. About a 35 minute uber from downtown in non-rush hour. Recommend making a morning of it."
+        },
+        {
+          "activity": "Frida Kahlo Museum",
+          "notes": "Around a 30 minute uber from central Mexico City, take the tour around Frida's childhood \"blue\" home. Open air tour exploring her works of art. Head over to the Coyoacan Market aftwewards for a cafe at El Jarocho."
         }
       ],
       "night": [],
@@ -61,6 +64,14 @@
         {
           "restaurant": "King's County",
           "notes": "Great spot for takeout or to dine-in. One of the best Chinese spots in the city - get the general tso's chicken, fried rice, egg rolls, and dumplings."
+        },
+        {
+          "restaurant": "Tea & Sympathy",
+          "notes": "TIny restaurant tucked away in West Village serving traditional British comfort food and a wide array of teas. I paired my tea with a lamb and cranberry pie - a perfect spot for a late lunch, or cozy early dinner."
+        },
+        {
+          "restaurant": "Cucina Alba",
+          "notes": "Lively with a modern design, it feels like this restaurant could be in Miami. Scene of fashionable people having dinner before going out - the food was surprisingly very good. We had the chopped salad, artichokes, table side spicy burrata pasta, agnolotti, and branzino. "
         }
       ],
       "day": [
@@ -85,22 +96,23 @@
           "notes": "Beautiful hotel in Kensington, reasonably priced, small but clean rooms, great gym and restaurant. Have a drink by the fireplace in the cozy sitting room off the lobby."
         }
       ],
-      "restaurants": [],
-      "day": [],
-      "night": [
+      "restaurants": [
         {
-          "activity": "Test",
-          "notes": "1"
+          "restaurant": "Isabel Mayfair",
+          "notes": "Chic restaurant with a gorgeous dining room serving the type of clientele you'd expect to see in Soho or St. Barth. A dinner DJ has everyone moving in their seats, good food, great cocktails, and a lounge underneath the restaurant for those who want to keep the night going."
         },
         {
-          "activity": "Test",
-          "notes": "1"
-        },
-        {
-          "activity": "test ",
-          "notes": "2"
+          "restaurant": "Tamarind",
+          "notes": "High-end Indian restaurant, a buzzing atmosphere with a stylish yet comfortable interior. Fantastic food - we had the baked vegetable samosa, the crispy lobster, and chicken tikka. Cocktails were also beautifully prepared and interesting flavor cominations. "
         }
       ],
+      "day": [
+        {
+          "activity": "The National Gallery",
+          "notes": "Classic London museum right off Trafalgar Square - worth spending an hour or two exploring the European works of art."
+        }
+      ],
+      "night": [],
       "id": 6
     },
     {
@@ -108,13 +120,26 @@
       "hotels": [
         {
           "hotel": "The Parker",
-          "notes": "Luxurious but artistic hotel with great pool scenes, tasty breakfast restaurant, and lobby bar that will take you late into the night."
+          "notes": "Highly recommend, cool but luxurious hotel tucked away in palm springs with great pool scene, artsy lobby, and ornate rooms."
         }
       ],
       "restaurants": [],
       "day": [],
       "night": [],
       "id": 7
+    },
+    {
+      "destination": "Cape Town",
+      "hotels": [
+        {
+          "hotel": "Belmond Mount Nelson",
+          "notes": "One of my favorite hotels I've stayed in. A pink facade in the heart of Cape Town, the rooms, pool, and lobby bar/restaurant are all perfectly done. Have a martini while sitting in the open air bar before dinner and meet interesting people from across the world. Sit poolside in a gorgeous setting on plush fabric chairs. Breakfast buffet is a must! "
+        }
+      ],
+      "restaurants": [],
+      "day": [],
+      "night": [],
+      "id": 8
     }
   ]
 }
