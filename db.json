@@ -5,7 +5,11 @@
       "hotels": [
         {
           "hotel": "St. James",
-          "notes": "Lovely classic hotel tucked away in a courtyard in the 16th arrondissement walking distance from the Arc de Triomphe. Felt more residential and less touristy but luxorious."
+          "notes": "Lovely classic hotel tucked away in a courtyard in the 16th arrondissement walking distance from the Arc de Triomphe."
+        },
+        {
+          "hotel": "Test",
+          "notes": "Test"
         }
       ],
       "restaurants": [
@@ -20,12 +24,7 @@
     },
     {
       "destination": "Mexico City",
-      "hotels": [
-        {
-          "hotel": "Four Seasons",
-          "notes": "Located in the Roma Norte neighborhood, the hotel wraps around a lush courtyard where the hotel has set-up their restaurant seating area. Comfortable and clean rooms, good service, and a good deal relative to most four seasons."
-        }
-      ],
+      "hotels": [],
       "restaurants": [
         {
           "restaurant": "Contramar",
@@ -140,6 +139,45 @@
       "day": [],
       "night": [],
       "id": 8
+    },
+    {
+      "destination": "Chicago",
+      "hotels": [],
+      "restaurants": [
+        {
+          "restaurant": "Gibson's",
+          "notes": "Old-school Chicago steak-house with barroom piano player, big sides like cream-of-spinach, mashed potatoes, and good steaks."
+        }
+      ],
+      "day": [],
+      "night": [],
+      "id": 9
+    },
+    {
+      "destination": "Turks & Caicos",
+      "hotels": [
+        {
+          "hotel": "Somsert",
+          "notes": "Beautiful, serene, and clean with a quiet but stunning pool overlooking the hotel's beach and the grace bay ocean."
+        }
+      ],
+      "restaurants": [
+        {
+          "restaurant": "Coco Bistro",
+          "notes": "Must-go while in Turks. Their staple orange walls open up into a palm covered outdoor dining room with delicious fish, lobster, and conch choices."
+        },
+        {
+          "restaurant": "Coiyaba",
+          "notes": "Another great restaurant on the island. Feels a bit more authentic with unique interior design and open-air courtyard to dine under string lights. Get the popover and the curry."
+        },
+        {
+          "restaurant": "Bay Bistro",
+          "notes": "Understated but delicious beach dining. Make a reservation for dinner during the busy season but walk up for lunch or on an off night. Fresh fish, great appetizers including conch wontons and vegetable spring rolls. The chocolate torte is a must get for dessert."
+        }
+      ],
+      "day": [],
+      "night": [],
+      "id": 10
     }
   ]
 }

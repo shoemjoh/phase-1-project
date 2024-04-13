@@ -5,6 +5,12 @@ document.addEventListener("DOMContentLoaded", () => {
     // Grab the html destination form and the delete buttons on each tile:
     const destinationForm = document.querySelector(".add-destination-form")
     const deleteBtn = document.querySelector(".delete-button")
+    const addReviewBtn = document.getElementById("new-review-btn")
+    const reviewFormContainer = document.querySelector(".container")
+
+    addReviewBtn.addEventListener('click', () => {
+        reviewFormContainer.style.display = "block"
+    })
 
     destinationForm.addEventListener('submit', handleReviewEvent)
     // Handle a form submission event.
@@ -90,6 +96,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 }
                 destinationForm.reset();
+                reviewFormContainer.style.display = "none";
             });
     }
     // Is called when a new destination is added in the form.
@@ -127,6 +134,8 @@ document.addEventListener("DOMContentLoaded", () => {
         })
         // Allow for Add To Destination button.
         tile.querySelector(".addto-button").addEventListener('click', () => {
+            reviewFormContainer.style.display = "block"
+
             const destinationText = destination.destination;
             const destinationInput = document.getElementById('destinations');
             destinationInput.value = destinationText;
@@ -193,16 +202,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 })
                 // Iterate through each day notes in the data object.
                 data.day.forEach((d, index) => {
-                    console.log(`Index when we iterate through and create the dayList! ${index}`)
                     dayList += `<li id=day-${index}><b>${d.activity}</b>: ${d.notes} <button class="d-btn" data-day-index=${index} data-destination-index=${id}>-</button></li>`;
-                    console.log(`Destination ID when we create the daylist! ${id}`)
                 })
                 // Iterate through each night in the data object.
                 data.night.forEach((n, index) => {
-                    console.log(`Index when we iterate through and create the nightList! ${index}`)
                     nightList += `<li id=night-${index}><b>${n.activity}</b>: ${n.notes} <button class="d-btn" data-night-index=${index} data-destination-index=${id}>-</button></li>`;
-                    console.log(`Destination ID when we create the nightlist! ${id}`)
-
                 })
 
                 let logElement = document.querySelector('#destination-log');
