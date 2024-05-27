@@ -1,4 +1,3 @@
-// COMMIT ABOUT 30 TIMES DURING THIS PROJECT, PRESENT TENSE
 
 // Let the DOM content load before running any functions.
 document.addEventListener("DOMContentLoaded", () => {
@@ -82,11 +81,6 @@ document.addEventListener("DOMContentLoaded", () => {
                     })
                         .then(res => res.json())
                         .then(updatedDestination => {
-                            // Update the tile in the DOM if needed
-                            //const tileToUpdate = document.querySelector(`.tile[data-id="${existingDestination.id}"]`);
-                            //if (tileToUpdate) {
-                            //    // ... (update tile content with new information)
-                            //}
                             console.log("Destination updated:", updatedDestination);
                         });
                 } else {
@@ -129,7 +123,6 @@ document.addEventListener("DOMContentLoaded", () => {
     `
         // Allow for delete button.
         tile.querySelector(".delete-button").addEventListener('click', () => {
-            // tile.remove()
             deleteDestination(tile, destination.id)
         })
         // Allow for Add To Destination button.
@@ -146,7 +139,6 @@ document.addEventListener("DOMContentLoaded", () => {
         console.log(tile);
         // Style the tiles.
         tile.addEventListener('mouseover', () => {
-            //const randomColor = `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`;
             tile.style.backgroundColor = "#993246";
         })
         tile.addEventListener('mouseleave', () => {
@@ -230,7 +222,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 `;
 
                 let deleteArray = Array.from(logElement.querySelectorAll('.d-btn'))
-                // might need to get specific for which buttons we are selecting
                 deleteArray.forEach((btn) => {
                     btn.addEventListener('click', function () {
                         const hotelIndex = this.getAttribute('data-hotel-index');
@@ -238,7 +229,6 @@ document.addEventListener("DOMContentLoaded", () => {
                         const dayIndex = this.getAttribute('data-day-index');
                         const nightIndex = this.getAttribute('data-night-index');
                         const destinationIndex = this.getAttribute('data-destination-index');
-                        // const entry = this.getElementById(`#hotel-${index}`)
                         deleteDestinationItem(hotelIndex, restaurantIndex, dayIndex, nightIndex, destinationIndex)
                     })
                 })
@@ -382,14 +372,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Using mock backend using db.json server instead of remote API.
     function getDestinations() {
-        // HTTP GET request to local server
-        // Run json-server --watch db.json in the terminal
-        // Allows for asynchronous execution - can go do other stuff while the fetch is going to the API
-        // What two things does the single fetch line do - sends a HTTP get request, returns a project object.
-        // Three possible statuses - pending, fulfilled, rejected   
+
         fetch('http://localhost:3000/destinations')
             .then((resp) => resp.json())
-            // Parse with json method
             .then((data) => {
                 initializeDestinations(data)
             })

@@ -231,19 +231,6 @@
       "day": [],
       "night": [],
       "id": 11
-    },
-    {
-      "destination": "Tokyo",
-      "hotels": [
-        {
-          "hotel": "Hotel A",
-          "notes": "Amazing"
-        }
-      ],
-      "restaurants": [],
-      "day": [],
-      "night": [],
-      "id": 12
     }
   ]
 }
