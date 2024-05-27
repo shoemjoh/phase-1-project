@@ -135,7 +135,6 @@ document.addEventListener("DOMContentLoaded", () => {
         // Allow for Add To Destination button.
         tile.querySelector(".addto-button").addEventListener('click', () => {
             reviewFormContainer.style.display = "block"
-
             const destinationText = destination.destination;
             const destinationInput = document.getElementById('destinations');
             destinationInput.value = destinationText;
@@ -260,6 +259,7 @@ document.addEventListener("DOMContentLoaded", () => {
             if (hotelIndex) {
                 const itemID = `hotel-${hotelIndex}`
                 document.getElementById(itemID).remove();
+                // Does this GET request need a second parameter?
                 fetch(`http://localhost:3000/destinations/${destinationID}`, {
                     method: 'GET',
                     headers: {
@@ -384,6 +384,9 @@ document.addEventListener("DOMContentLoaded", () => {
     function getDestinations() {
         // HTTP GET request to local server
         // Run json-server --watch db.json in the terminal
+        // Allows for asynchronous execution - can go do other stuff while the fetch is going to the API
+        // What two things does the single fetch line do - sends a HTTP get request, returns a project object.
+        // Three possible statuses - pending, fulfilled, rejected   
         fetch('http://localhost:3000/destinations')
             .then((resp) => resp.json())
             // Parse with json method

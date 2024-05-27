@@ -24,6 +24,10 @@ Third, create and save and object in the file with the attribute "Destinations" 
 Finally, run the following command from the same directory that db.json is in, which will start up the server and allow you to access it:
 json-server --watch db.json
 
+Additional Resources:
+I use data attributes in some of my HTML elements in this project. See my blog post here detailing how they are used;
+https://medium.com/@shoemjoh/adding-data-attributes-to-html-elements-aa0439049818
+
 
 
 

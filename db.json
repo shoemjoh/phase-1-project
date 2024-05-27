@@ -6,10 +6,6 @@
         {
           "hotel": "St. James",
           "notes": "Lovely classic hotel tucked away in a courtyard in the 16th arrondissement walking distance from the Arc de Triomphe."
-        },
-        {
-          "hotel": "Test",
-          "notes": "Test"
         }
       ],
       "restaurants": [
@@ -18,13 +14,23 @@
           "notes": "Classic parisian restaurant serving rich dishes like snails, foie gras, and tenderloin. Has a Michelin star but felt a bit touristy and the food was a little disappointing."
         }
       ],
-      "day": [],
+      "day": [
+        {
+          "activity": "Merci Boutiques",
+          "notes": "Very unique and cool shopping experience. In the Marais area - this tucked away market has 3 levels of curated offering."
+        }
+      ],
       "night": [],
       "id": 2
     },
     {
       "destination": "Mexico City",
-      "hotels": [],
+      "hotels": [
+        {
+          "hotel": "Four Seasons",
+          "notes": "Set in the Roma Norte neighborhood, clean and comfortable rooms open up to a lush center courtyard. Have a coffee in the morning or a drink before dinner in the open air. Lively pool with good lunch. Walking distance to anthropology museum and fun neighborhoods."
+        }
+      ],
       "restaurants": [
         {
           "restaurant": "Contramar",
@@ -54,7 +60,12 @@
     },
     {
       "destination": "New York",
-      "hotels": [],
+      "hotels": [
+        {
+          "hotel": "Test Hotel",
+          "notes": "Test hotel description"
+        }
+      ],
       "restaurants": [
         {
           "restaurant": "Libertine",
@@ -71,6 +82,22 @@
         {
           "restaurant": "Cucina Alba",
           "notes": "Lively with a modern design, it feels like this restaurant could be in Miami. Scene of fashionable people having dinner before going out - the food was surprisingly very good. We had the chopped salad, artichokes, table side spicy burrata pasta, agnolotti, and branzino. "
+        },
+        {
+          "restaurant": "Bar Boulod",
+          "notes": "Across the street from Lincoln Center, enjoy a burger and martini with pre-concert goers. Be sure to get a reservation between 6-7, as most are trying to get a bite before walking over."
+        },
+        {
+          "restaurant": "Ci Siamo",
+          "notes": "Italian restaurant in Hudson Yards from Danny Meyer's USHG - one of our favorite Italian spots in the city. As does everything in Hudson Yards, the restaurant feels like it could be set in Dubai. Start with the focaccia or the pizzette, the insalate verde or squash, and then the rabbit stracci is a must along with tagliatelle or rigatoni."
+        },
+        {
+          "restaurant": "Sugarfish",
+          "notes": "Great for sushi night out. Not outrageously pricey but delicious. No reservations taken, so put your name in and then go grab a drink nearby."
+        },
+        {
+          "restaurant": "Cafe Chelsea",
+          "notes": "Renovated space at the bottom of the Chelsea Hotel. We had the bluefin tuna, artichoke, endive salad, ravioli (must), and steak frites (must). Significant addition to the neighborhood - stylish, good vibe, and great food."
         }
       ],
       "day": [
@@ -141,23 +168,14 @@
       "id": 8
     },
     {
-      "destination": "Chicago",
-      "hotels": [],
-      "restaurants": [
-        {
-          "restaurant": "Gibson's",
-          "notes": "Old-school Chicago steak-house with barroom piano player, big sides like cream-of-spinach, mashed potatoes, and good steaks."
-        }
-      ],
-      "day": [],
-      "night": [],
-      "id": 9
-    },
-    {
       "destination": "Turks & Caicos",
       "hotels": [
         {
-          "hotel": "Somsert",
+          "hotel": "Grace Bay Club",
+          "notes": "Probably the most luxurious on Grace Bay; fun to go to for dinner or a drink and shop at their boutique, but there are quieter, less expensive but amazing hotels like the Somerset down the beach."
+        },
+        {
+          "hotel": "Somerset",
           "notes": "Beautiful, serene, and clean with a quiet but stunning pool overlooking the hotel's beach and the grace bay ocean."
         }
       ],
@@ -173,11 +191,59 @@
         {
           "restaurant": "Bay Bistro",
           "notes": "Understated but delicious beach dining. Make a reservation for dinner during the busy season but walk up for lunch or on an off night. Fresh fish, great appetizers including conch wontons and vegetable spring rolls. The chocolate torte is a must get for dessert."
+        },
+        {
+          "restaurant": "Deck at Seven Stars",
+          "notes": "Great lunch scene and vibe on the deck. Fish tacos, good drinks, and overlooking the beach/water."
+        }
+      ],
+      "day": [],
+      "night": [
+        {
+          "activity": "Ritz Casino",
+          "notes": "Fun spot to play blackjack, roulette, or craps. Walk over to the Ritz's beautiful outdoor bar afterwards to celebrate (or commiserate)."
+        }
+      ],
+      "id": 10
+    },
+    {
+      "destination": "Montreal",
+      "hotels": [
+        {
+          "hotel": "W Hotel",
+          "notes": "Great for bachelor/bachelorette party or fun weekend away - sleek, modern, upscale with clean rooms and in a good central location, walkable to Old Town."
+        }
+      ],
+      "restaurants": [
+        {
+          "restaurant": "Joe Beef",
+          "notes": "Amazing steakhouse - gives old school Montreal feel. Must make reservation months in advance."
+        },
+        {
+          "restaurant": "Grinder",
+          "notes": "Another great steakhouse with an energetic dining room, house music playing, stylish patrons, and great steak/sides. Get the sweet potato fries and the mushrooms. "
+        },
+        {
+          "restaurant": "Yoko Luna",
+          "notes": "A more interesting and better cuisine, but feels like Tao in New York. DJ elevated in the center of an ornate dining room - awesome spot for dinner before a night out. You can also stay for bottle service or hang at the bar post-dinner."
         }
       ],
       "day": [],
       "night": [],
-      "id": 10
+      "id": 11
+    },
+    {
+      "destination": "Tokyo",
+      "hotels": [
+        {
+          "hotel": "Hotel A",
+          "notes": "Amazing"
+        }
+      ],
+      "restaurants": [],
+      "day": [],
+      "night": [],
+      "id": 12
     }
   ]
 }
